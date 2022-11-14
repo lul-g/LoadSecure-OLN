@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 :root {
   --primary_clr: #fec013;
-  --secondary_clr: #214551;
+  /* --secondary_clr: #214551; */
+  --secondary_clr: #455c66;
   --third_clr: #1d1836;
   --main_bg_clr: #edf2f8;
 
@@ -9,18 +10,17 @@
 }
 body {
   overflow-x: hidden;
+  background-color: var(--main_bg_clr);
+  font-family: "Oswald", sans-serif;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .container {
   margin: 0 auto;
   max-width: 1366px;
-  position: relative;
-  height: 1000vh;
-}
-section {
-  font-family: "Oswald", sans-serif;
-  background-color: var(--main_bg_clr);
-  /* overflow: hidden; */
 }
 
 /* shared */
@@ -41,14 +41,12 @@ header {
   align-items: center;
 
   padding: 1rem 3rem;
+  height: 10rem;
 
   position: sticky;
-  position: -webkit-sticky;
-
   top: 0;
+  z-index: 999;
   width: 100%;
-  /* left: 50%;
-  transform: translate(-50%, 0); */
 }
 .logo img {
   width: 8rem;
@@ -71,7 +69,7 @@ header {
 }
 .nav-txt li > a {
   color: var(--secondary_clr);
-  font-weight: 500;
+  font-weight: 300;
 }
 .nav-txt li > a:hover {
   border-bottom: 2px solid var(--secondary_clr);
@@ -96,7 +94,7 @@ header {
   top: 2rem;
   left: 0;
   opacity: 0;
-  transition: all 0.3s 1s ease;
+  transition: all 0.3s 0.5s ease;
 
   background: var(--secondary_clr);
   padding: 1rem;
@@ -196,7 +194,7 @@ header {
     box-shadow: 0 0 20px 2px var(--secondary_clr);
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 750px) {
   /* ! header-align items remove to un-center logo and button */
   .nav {
     flex-direction: column;
@@ -207,6 +205,7 @@ header {
   }
   header {
     align-items: flex-start;
+    height: 8rem;
   }
   .nav-txt,
   .nav-btn-icon {
@@ -216,6 +215,8 @@ header {
   .nav-toggle-btn {
     display: inline-block;
     margin: 1rem 0 0 clamp(3rem, 2rem, 10rem);
+    position: sticky !important;
+    top: 2rem;
     z-index: 999;
   }
   .nav-toggle-btn input {
@@ -239,7 +240,7 @@ header {
   .nav-txt,
   .nav-btns {
     display: inline-block;
-    transform: translateX(20rem);
+    transform: translateX(30rem);
     transition: 0.1s ease all;
   }
   .nav-btn {
@@ -250,6 +251,7 @@ header {
   .nav-btns.active {
     transform: translate(-5rem, -1rem);
     transition: 0.3s ease all;
+    position: sticky;
   }
 
   .nav-txt.active {
@@ -259,9 +261,10 @@ header {
     height: 50vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
     padding: 7rem 2rem 0 2rem;
+    top: 1rem;
   }
   .nav-txt.active li > a {
     color: var(--main_bg_clr);
@@ -273,15 +276,16 @@ header {
   .nav-btns.active {
     background-color: var(--secondary_clr);
     width: 35rem;
-    height: 70vh;
+    height: 50vh;
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
+    bottom: 0;
   }
   .nav-btns.active .btn-1 {
     background-color: var(--main_bg_clr);
     color: var(--secondary_clr);
-    margin: 0 0 2rem 0;
+    margin: 1rem 0 2rem 0;
   }
   .btn-1:hover {
     box-shadow: 0 0 25px 1px var(--main_bg_clr);
@@ -298,7 +302,7 @@ header {
 
   .nav-txt .extra_nav {
     transform: scale(0);
-    transition: all 0.1s 1s ease;
+    transition: all 0.1s 0.5s ease;
   }
   .nav-txt li:first-child:hover > .extra_nav {
     transform: scale(1);
@@ -314,7 +318,7 @@ header {
     transition: all 0.1s 0.5s ease;
   }
   .nav-txt li:first-child:hover > .extra_nav {
-    position: relative;
+    position: absolute;
   }
   .extra_nav {
     top: initial;
