@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+.mobile {
+  display: grid;
+  place-items: start;
+
+  --primary_clr: #fec013;
+  --secondary_clr: #455c66;
+  --third_clr: #1d1836;
+  --txt-clr: white;
+  --main_bg_clr: hsl(213, 44%, 90%);
+
+  --font-size-icon: 30px;
+  --font-size-header: 40px;
+  --font-size-header-2: 25px;
+  --font-size-p: 20px;
+
+  --max-screen-width: 1366px;
+
+  background-color: var(--main_bg_clr);
+}
+
+.mobile_app {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+.mobile_app h1,
+h3 {
+  text-transform: uppercase;
+  color: var(--secondary_clr);
+  text-align: center;
+}
+.mobile_app h1 {
+  font-weight: 400;
+  margin: 2rem 0 0 0;
+}
+.mobile_app h3 {
+  font-weight: 400;
+  margin-bottom: 1rem;
+  font-size: 17px;
+}
+.mobile_app .zone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 2rem;
+}
+.mobile_app .zone div {
+  margin: 0 0 0 3rem;
+}
+.mobile_app .zone div p {
+  margin: 2rem 0;
+  line-height: 2.5rem;
+  position: relative;
+}
+.mobile_app .zone div p::before {
+  font: var(--fa-font-solid);
+  content: "\23";
+  position: absolute;
+  top: 0.6rem;
+  left: -2rem;
+  font-size: 20px;
+  width: 1rem;
+  height: 1rem;
+}
+
+@media (max-width: 785px) {
+  .mobile_app .zone {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+}

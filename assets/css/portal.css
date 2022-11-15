@@ -1,0 +1,77 @@
+.section_portal {
+  display: grid;
+  place-items: start;
+
+  --primary_clr: #fec013;
+  --secondary_clr: #455c66;
+  --third_clr: #1d1836;
+  --txt-clr: white;
+  --main_bg_clr: hsl(213, 44%, 90%);
+
+  --font-size-icon: 30px;
+  --font-size-header: 40px;
+  --font-size-header-2: 25px;
+  --font-size-p: 20px;
+
+  --max-screen-width: 1366px;
+
+  background-color: var(--secondary_clr);
+}
+
+.portal {
+  padding: 3rem;
+}
+.portal h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-size-header-2);
+  font-weight: 300;
+  color: var(--txt-clr);
+  margin-bottom: 2rem;
+}
+
+.portal .btm {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.portal .btm div p {
+  width: 90%;
+  line-height: 2.2rem;
+  position: relative;
+  color: var(--txt-clr);
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+}
+.portal .btm div p::before {
+  font: var(--fa-font-solid);
+  content: "\23";
+  position: absolute;
+  top: 0.6rem;
+  left: -2rem;
+  font-size: 20px;
+  width: 1rem;
+  height: 1rem;
+}
+.portal .btm img {
+  width: 50%;
+  object-fit: contain;
+}
+
+@media (max-width: 1000px) {
+  .portal .btm {
+    flex-direction: column-reverse;
+  }
+  .portal .btm div {
+    margin-top: 2rem;
+  }
+  .portal .btm div p {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .portal .btm img {
+    width: 80%;
+    object-fit: contain;
+  }
+}

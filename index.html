@@ -1,94 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LoadSecureSystems</title>
 
-    <!-- *favicon -->
-    <link
-      rel="icon"
-      href="/assets/img/loadsecure_favicon.png"
-      type="image/x-icon"
-    />
-    <!-- *fontawesome -->
-    <script
-      src="https://kit.fontawesome.com/b6798fcdf3.js"
-      crossorigin="anonymous"
-    ></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LoadSecureSystems</title>
 
-    <!-- *css -->
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/video.css" />
-    <link rel="stylesheet" href="/assets/css/footer.css" />
+  <!-- *favicon -->
+  <link rel="icon" href="/assets/img/loadsecure_favicon.png" type="image/x-icon" />
+  <!-- *fontawesome -->
+  <script src="https://kit.fontawesome.com/b6798fcdf3.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="/assets/css/customers.css" />
-    <link rel="stylesheet" href="/assets/css/portal.css" />
-    <link rel="stylesheet" href="/assets/css/mobile.css" />
+  <!-- *css -->
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/hero.css" />
+  <link rel="stylesheet" href="/assets/css/about.css" />
+  <link rel="stylesheet" href="/assets/css/mobile.css" />
+  <link rel="stylesheet" href="/assets/css/footer.css" />
 
-    <!-- *js -->
-    <script defer src="/assets/js/nav.js"></script>
-  </head>
-  </head>
-  <body>
-    <header class="header container" id="header">
-      <a href="/" class="logo">
-          <img
-            src="assets/img/logo.png"
-            alt="Load Secure Systems is your real-time visibility solution. Our logo represents not only the improved physical security of your loads but also the increased feeling of security that you will have when working with Load Secure Systems."
-          />
-      </a>
-      <div class="nav">
-        <ul class="nav-txt ">
-            <li><a href="">CUSTOMERS 
-                <ul class="extra_nav">
-                  <li><a href="/">Shippers</a></li>
-                  <li><a href="/">Logistics</a></li>
-                </ul></a>
-          </li>
-            <li><a href="">PORTAL</a></li>
-            <li><a href="">MOBILE APP</a></li>
-        </ul>
-        <ul class="nav-btns ">
-            <li><a class="nav-btn-icon icon-1" href=""><i class="fa-solid fa-rocket"></i></a></li>
-            <li><a class="nav-btn-icon icon-2" target="_blank" href="https://portal.loadsecuresystems.com/login "><i class="fa-solid fa-right-to-bracket"></i></a></li>
-            <li><a class="nav-btn btn-1" href="">Request a Demo</a></li>
-            <li><a class="nav-btn btn-2" target="_blank" href="https://portal.loadsecuresystems.com/login ">LogIn to Portal</a></li>
-        </ul>
-      </div>
-      <li class="nav-toggle-btn">
-        <input onclick="toggle_nav()" type="checkbox" name="" id="nav_toggler">
-        <label for="nav_toggler"></label>
-      </li>
-    </header>
-    <section class="home">
-      <div class="container">
-        <div class="video-player">
-          <div class="video-overlay"></div>
-          <video muted  src="./assets/img/loadsecure_video.mp4"></video>
-          <div class="txt-overlay">
-            <div class="txt">
-              <h1>load secure</h1>
-              <p>Deliver logistics solutions with excellence through a commited team focused on growing with customers</p>
-            </div>
-            <div class="video-controller">
-              <input type="checkbox" name="" id="video-cntrl">
-              <label for="video-cntrl"></label>
-            </div>
-            <div class="sound-controller">
-              <input type="checkbox" name="" id="sound-cntrl">
-              <label for="sound-cntrl"></label>
-            </div>
+  <link rel="stylesheet" href="/assets/css/customers.css" />
+  <link rel="stylesheet" href="/assets/css/portal.css" />
+
+  <!-- *js -->
+  <script defer src="/assets/js/nav.js"></script>
+</head>
+</head>
+
+<body>
+  <header class="header container" id="header">
+    <a href="/" class="logo">
+      <img src="assets/img/logo.png"
+        alt="Load Secure Systems is your real-time visibility solution. Our logo represents not only the improved physical security of your loads but also the increased feeling of security that you will have when working with Load Secure Systems." />
+    </a>
+    <div class="nav">
+      <ul class="nav-txt ">
+        <li><a href="">CUSTOMERS
+            <ul class="extra_nav">
+              <li><a href="/">Shippers</a></li>
+              <li><a href="/">Logistics</a></li>
+            </ul>
+          </a>
+        </li>
+        <li><a href="">PORTAL</a></li>
+        <li><a href="">MOBILE APP</a></li>
+      </ul>
+      <ul class="nav-btns ">
+        <li><a class="nav-btn-icon icon-1" href=""><i class="fa-solid fa-rocket"></i></a></li>
+        <li><a class="nav-btn-icon icon-2" target="_blank" href="https://portal.loadsecuresystems.com/login "><i
+              class="fa-solid fa-right-to-bracket"></i></a></li>
+        <li><a class="nav-btn btn-1" href="">Request a Demo</a></li>
+        <li><a class="nav-btn btn-2" target="_blank" href="https://portal.loadsecuresystems.com/login ">LogIn to
+            Portal</a></li>
+      </ul>
+    </div>
+    <li class="nav-toggle-btn">
+      <input onclick="toggle_nav()" type="checkbox" name="" id="nav_toggler">
+      <label for="nav_toggler"></label>
+    </li>
+  </header>
+  <section class="home">
+    <div class="container">
+      <div class="video-player">
+        <div class="video-overlay"></div>
+        <video muted src="./assets/img/loadsecure_video.mp4"></video>
+        <div class="txt-overlay">
+          <div class="txt">
+            <h1>load secure</h1>
+            <p>Deliver logistics solutions with excellence through a commited team focused on growing with customers</p>
+          </div>
+          <div class="video-controller">
+            <input type="checkbox" name="" id="video-cntrl">
+            <label for="video-cntrl"></label>
+          </div>
+          <div class="sound-controller">
+            <input type="checkbox" name="" id="sound-cntrl">
+            <label for="sound-cntrl"></label>
           </div>
         </div>
-        
       </div>
-    </section>
-    <section>
-      <div class="container">
-        <footer class="footer"></footer>
+    </div>
+  </section>
+  <section class="about">
+    <div class="container-2">
+      <div class="top">
+        <h1>Your Realtime visibility solution</h1>
+        <div class="triad">
+         
+          <div class="card second">
+            <img src="assets/img/man.png" alt="">
+            <h4>EXPERIENCE-BASED </h4>
+            <p> Designed for logistics professionals by logistics professionals. The Load Secure enterprise solutions
+              team can customize Load Secure to fit your exact business needs. Load Secure has a streamlined platform
+              for easy implementation. </p>
+          </div> 
+          <div class="card first">
+            <img src="assets/img/loadsecure.png" alt="">
+            <h4>SECURE</h4>
+            <p> Safe and secure. Load Secure Systems is protected with Amazon Web Services Cloud Security, the most
+              secure global infrastructure available. Coupled with a seamless integration process, shippers can feel
+              confident knowing where their shipments are 24/7.</p>
+          </div>
+          <div class="card third">
+            <img src="assets/img/aim.png" alt="">
+            <h4>ACCURATE </h4>
+            <p> The Load Secure Driver application uses both precise and coarse location so you can see exactly where
+              your shipment is – down to the exact parking spot. Location in the suer portal updates in real time, so
+              you never lose visibility.</p>
+          </div>
+        </div>
       </div>
-    </section>
-  </body>
+      <div class="btm">
+        <p>Take control of your supply chain today! Find out about the technology to revolutionize supply chains around
+          the world.</p>
+        <div><a class="nav-btn btn-2" target="_blank" href="https://portal.loadsecuresystems.com/login ">schedule a
+            demo</a></div>
+      </div>
+    </div>
+  </section>
+  <section class="section_mobile">
+    <div class="container mobile_app">
+      <h1>load secure driver mobile application</h1>
+      <h3>ACHIEVING THE HIGHEST COMPLIANCE IN THE MARKET </h3>
+      <div class="zone">
+        <img src="./assets/img/mobile_app.jpg" alt="">
+        <div>
+          <p>The Load Secure Systems Driver Application is as simple as possible, resulting in over a 95% compliance
+            rate. Drivers log in, enable location services, and begin their journey. It has received excellent feedback
+            from drivers regarding its simplicity – which is what ensures that they are on tracking so that you can stay
+            connected with your products 24/7.</p>
+          <p>The mobile application was developed alongside the platform, not added to it. So it is seamlessly
+            integrated with the Load Secure portal, and is used for integrations outside of Load Secure as well.</p>
+          <p>Drivers can download the Load Secure Systems driver mobile application form both the Apple and Google Play
+            store.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_portal">
+    <div class="container portal">
+      <h1>load secure portal</h1>
+      <div class="btm">
+        <div class="txt">
+          <p>The Load Secure user portal is easy to navigate and has features useful to you and your business. Easily share locations with customers, and view updates by the second. </p>
+          <p>Shippers and receivers can take advantage of quick and easy to view information, displayed immediately upon login. No learning curve, and no difficult steps. </p>
+          <p>The portal is customizable to fit your needs – whether you need a simple platform, extra features, or scalability, the Load Secure enterprise team works with you to get exactly what you need. </p>
+        </div>
+        <img src="assets/img/comp.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="section_footer">
+    <footer class="container footer">
+        <ul class="footer-links">
+          <h4 class="title">Resources</h4>
+          <li><a href="">Customers</a></li>
+          <li><a href="">Shippers</a></li>
+          <li><a href="">Logistics</a></li>
+          <li><a href="">Portal</a></li>
+          <li><a href="">Mobile apP</a></li>
+          <li><a href="">REQUEST A DEMO</a></li>
+          <li><a href="">LOG IN TO PORTAL</a></li>
+
+        </ul>
+        <div class="footer-contact">
+          <h4 class="title">Contact us</h4>
+          <ul>
+            <li><h5></h5></li>
+            
+          </ul>
+        </div>
+        <div class="footer-about-us"></div>
+        <div class="footer-form"></div>
+    </footer>
+    <div class="copyright"></div>
+  </section>
+</body>
+
 </html>

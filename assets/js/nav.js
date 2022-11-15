@@ -75,23 +75,23 @@ function unmute() {
 }
 
 // *set active nav based on click
-let list = document.querySelectorAll("ul li");
-list.forEach((el) => {
-  el.addEventListener("click", () => {
-    set_active(el);
-  });
-});
+// let list = document.querySelectorAll("ul li");
+// list.forEach((el) => {
+//   el.addEventListener("click", () => {
+//     set_active(el);
+//   });
+// });
 
-function set_active(element) {
-  list.forEach((el) => {
-    if (el === element) {
-      el.classList.add("active");
-      el.style.transform = "translateX(0)";
-    } else {
-      el.classList.remove("active");
-    }
-  });
-}
+// function set_active(element) {
+//   list.forEach((el) => {
+//     if (el === element) {
+//       el.classList.add("active");
+//       el.style.transform = "translateX(0)";
+//     } else {
+//       el.classList.remove("active");
+//     }
+//   });
+// }
 
 // *set active nav based on page
 // let page_pos = document.body.scrollTop;
