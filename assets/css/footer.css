@@ -1,0 +1,26 @@
+.section_footer {
+  display: grid;
+  place-items: start;
+
+  --primary_clr: #fec013;
+  --secondary_clr: #455c66;
+  --third_clr: #1d1836;
+  --txt-clr: white;
+  --main_bg_clr: hsl(213, 44%, 90%);
+
+  --font-size-icon: 30px;
+  --font-size-header: 40px;
+  --font-size-header-2: 25px;
+  --font-size-p: 20px;
+
+  --max-screen-width: 1366px;
+
+  /* background-color: var(--secondary_clr); */
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  display: none;
+}
