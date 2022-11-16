@@ -12,6 +12,9 @@
 
   --max-screen-width: 1366px;
 }
+html {
+  scroll-behavior: smooth !important;
+}
 body {
   overflow-x: hidden;
   background-color: var(--main_bg_clr);
@@ -163,20 +166,20 @@ header {
   display: none;
 }
 .icon-1 {
-  background-color: var(--primary_clr);
+  background-color: var(--secondary_clr);
   border-radius: 50%;
   padding: 1rem;
-  color: var(--secondary_clr);
+  color: var(--main_bg_clr);
   text-align: center;
   line-height: 1rem;
 
   margin-right: 1rem;
 }
 .icon-2 {
-  background-color: var(--secondary_clr);
+  background-color: var(--primary_clr);
   border-radius: 50%;
   padding: 1rem;
-  color: var(--main_bg_clr);
+  color: var(--secondary_clr);
   text-align: center;
   line-height: 1rem;
 }
@@ -221,12 +224,6 @@ header {
 
   .nav-toggle-btn {
     display: inline-block;
-<<<<<<< HEAD
-    margin: 1rem 0 0 clamp(3rem, 2rem, 10rem);
-    position: sticky !important;
-    top: 2rem;
-=======
->>>>>>> 63316a87a3feb0c3a9f30c3e78225a5defc9e2d6
     z-index: 999;
   }
   .nav-toggle-btn input {
@@ -251,10 +248,7 @@ header {
   .nav-btns {
     display: inline-block;
     transform: translateX(30rem);
-<<<<<<< HEAD
-=======
     opacity: 0;
->>>>>>> 63316a87a3feb0c3a9f30c3e78225a5defc9e2d6
     transition: 0.1s ease all;
   }
   .nav-btn {
@@ -266,10 +260,7 @@ header {
     transform: translate(-5rem, -1rem);
     transition: 0.3s ease all;
     position: sticky;
-<<<<<<< HEAD
-=======
     opacity: 1;
->>>>>>> 63316a87a3feb0c3a9f30c3e78225a5defc9e2d6
   }
 
   .nav-txt.active {
@@ -298,10 +289,6 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding: 2rem;
-<<<<<<< HEAD
-    bottom: 0;
-=======
->>>>>>> 63316a87a3feb0c3a9f30c3e78225a5defc9e2d6
   }
   .nav-btns.active .btn-1 {
     background-color: var(--main_bg_clr);
