@@ -74,7 +74,11 @@
   color: var(--main_bg_clr);
   font-size: var(--font-size-p);
   font-weight: 300;
+<<<<<<< HEAD
   width: 500px;
+=======
+  width: 600px;
+>>>>>>> master
   letter-spacing: 3px;
   margin-bottom: 2rem;
 }
@@ -121,7 +125,11 @@
   content: "\f6a9";
 }
 
+<<<<<<< HEAD
 @media (max-width: 750px) {
+=======
+@media (max-width: 880px) {
+>>>>>>> master
   .video-player {
     --font-size-icon: 25px;
     --font-size-header: 30px;
@@ -146,7 +154,11 @@
     margin-bottom: 1rem;
   }
 }
+<<<<<<< HEAD
 @media (max-width: 500px) {
+=======
+@media (max-width: 550px) {
+>>>>>>> master
   .video-player {
     --font-size-icon: 15px;
     --font-size-header: 20px;
@@ -169,3 +181,17 @@
     letter-spacing: 0.1rem;
   }
 }
+<<<<<<< HEAD
+=======
+
+@media (max-width: 420px) {
+  .video-player .txt-overlay .txt h1 {
+    margin-bottom: 0.2rem;
+    font-size: calc(var(--font-size-p) + 3px);
+  }
+  .video-player .txt-overlay .txt p {
+    width: 140%;
+    font-size: calc(var(--font-size-p) - 3px);
+  }
+}
+>>>>>>> master

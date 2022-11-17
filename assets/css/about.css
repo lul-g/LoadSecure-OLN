@@ -30,6 +30,10 @@
   color: var(--secondary_clr);
   line-height: 15rem;
   font-weight: 400;
+<<<<<<< HEAD
+=======
+  text-transform: uppercase;
+>>>>>>> master
 }
 .about .triad {
   display: grid;
