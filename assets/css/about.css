@@ -57,11 +57,11 @@
 }
 
 .about .card img {
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
-  aspect-ratio: 1/1;
+  object-fit: contain;
+  width: 110px;
+  height: 110px;
 }
+
 .about .card h4 {
   color: var(--secondary_clr);
   font-size: var(--font-size-header-2);
@@ -69,6 +69,8 @@
 }
 .about .card p {
   line-height: 2.2rem;
+  width: 90%;
+  word-wrap: break-word;
 }
 
 .about .btm {

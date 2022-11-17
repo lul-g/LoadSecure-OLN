@@ -43,7 +43,7 @@ h3 {
 }
 .mobile_app .zone {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
 
   padding: 2rem;
@@ -52,13 +52,13 @@ h3 {
   border-radius: 30px;
 } */
 .mobile_app .zone div {
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 4rem;
+  width: 50%;
 }
 .mobile_app .zone div p {
   margin: 2rem 0;
   line-height: 2.5rem;
   position: relative;
-  /* width: 50%; */
 }
 /* .mobile_app .zone div p::before {
   font: var(--fa-font-solid);
@@ -75,5 +75,9 @@ h3 {
   .mobile_app .zone {
     flex-direction: column;
     padding: 2rem 1rem;
+  }
+  .mobile_app .zone div {
+    margin: auto;
+    width: 90%;
   }
 }
