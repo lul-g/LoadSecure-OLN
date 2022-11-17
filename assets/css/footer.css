@@ -3,11 +3,7 @@
   place-items: start;
 
   --primary_clr: #fec013;
-<<<<<<< HEAD
-  --secondary_clr: #455c66;
-=======
   --secondary_clr: #214551;
->>>>>>> master
   --third_clr: #1d1836;
   --txt-clr: white;
   --main_bg_clr: hsl(213, 44%, 90%);
@@ -19,16 +15,6 @@
 
   --max-screen-width: 1366px;
 
-<<<<<<< HEAD
-  /* background-color: var(--secondary_clr); */
-}
-
-.footer {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  display: none;
-=======
   background-color: var(--secondary_clr);
 }
 
@@ -180,5 +166,4 @@
 }
 .copyright a:hover {
   transform: scale(1.2);
->>>>>>> master
 }
