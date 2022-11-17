@@ -107,10 +107,7 @@ header {
   transition: all 0.3s 0.5s ease;
 
   background: var(--secondary_clr);
-<<<<<<< HEAD
-=======
   text-transform: uppercase;
->>>>>>> master
   border-radius: 15px;
   padding: 0 1rem;
   cursor: pointer;
@@ -187,11 +184,7 @@ header {
   text-align: center;
   line-height: 1rem;
 }
-<<<<<<< HEAD
-@media (max-width: 975px) {
-=======
 @media (max-width: 990px) {
->>>>>>> master
   header {
     padding: 1rem 2rem;
   }

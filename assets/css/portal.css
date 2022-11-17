@@ -24,11 +24,7 @@
 .portal h1 {
   text-align: center;
   text-transform: uppercase;
-<<<<<<< HEAD
-  font-size: var(--font-size-header-2);
-=======
   font-size: var(--font-size-header);
->>>>>>> master
   font-weight: 300;
   color: var(--txt-clr);
   margin-bottom: 2rem;
@@ -41,16 +37,6 @@
 }
 .portal .btm div p {
   width: 90%;
-<<<<<<< HEAD
-  line-height: 2.2rem;
-  position: relative;
-  color: var(--txt-clr);
-  font-weight: 200;
-  letter-spacing: 0.1rem;
-  margin-bottom: 1rem;
-}
-.portal .btm div p::before {
-=======
   line-height: 2.5rem;
   letter-spacing: 0.1rem;
   font-weight: 200;
@@ -59,7 +45,6 @@
   margin: 2rem 0;
 }
 /* .portal .btm div p::before {
->>>>>>> master
   font: var(--fa-font-solid);
   content: "\23";
   position: absolute;
@@ -68,18 +53,11 @@
   font-size: 20px;
   width: 1rem;
   height: 1rem;
-<<<<<<< HEAD
-}
-.portal .btm img {
-  width: 50%;
-  object-fit: contain;
-=======
 } */
 .portal .btm img {
   width: 50%;
   object-fit: contain;
   border-radius: 20px;
->>>>>>> master
 }
 
 @media (max-width: 1000px) {
