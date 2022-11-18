@@ -6,7 +6,7 @@
   /* --secondary_clr: #214551; */
   --secondary_clr: #455c66;
   --third_clr: #1d1836;
-  --main_bg_clr: hsl(213, 44%, 90%);
+  --main_bg_clr: #dae4f1;
 
   --font-size-icon: 30px;
 
@@ -17,9 +17,8 @@ html {
 }
 body {
   overflow-x: hidden;
-  background-color: var(--main_bg_clr);
   font-family: "Oswald", sans-serif;
-
+  background-color: var(--main_bg_clr);
   user-select: none;
   user-zoom: none;
 }
@@ -46,18 +45,30 @@ li {
   font: var(--fa-font-solid);
 }
 
+.section_header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 1rem 3rem;
-  height: 10rem;
+  padding: 1rem 2rem;
+  /* background-color: var(--main_bg_clr); */
 
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 99;
   width: 100%;
+
+  margin-bottom: 5rem;
+}
+.section_header.scrolled {
+  background-color: #214551;
 }
 .logo img {
   width: 8rem;
@@ -77,6 +88,7 @@ header {
   justify-content: space-evenly;
 
   letter-spacing: 2px;
+  --icon-clr: #455c66;
 }
 .nav-txt li > a {
   color: var(--secondary_clr);
@@ -92,7 +104,7 @@ header {
 .nav-txt li:first-child::after {
   font: var(--fa-font-solid);
   content: "\f0da";
-  color: var(--secondary_clr);
+  color: var(--icon-clr);
   font-size: larger;
   padding-left: 0.5rem;
 }
@@ -131,6 +143,7 @@ header {
 .nav-btns {
   width: 40%;
   justify-content: flex-end;
+  --glow: #455c66;
 }
 .nav-btns .btn-1 {
   margin-right: 2rem;
@@ -145,10 +158,10 @@ header {
   transition: all 0.3s ease;
 }
 .btn-1:hover {
-  box-shadow: 0 0 20px 2px var(--secondary_clr);
+  box-shadow: 0 0 20px 2px var(--glow);
 }
 .btn-2:hover {
-  box-shadow: 0 0 20px 2px var(--secondary_clr);
+  box-shadow: 0 0 20px 2px var(--glow);
 }
 .btn-2 {
   background: var(--primary_clr);
@@ -200,10 +213,10 @@ header {
     justify-content: space-between;
   }
   .icon-1:hover {
-    box-shadow: 0 0 20px 2px var(--secondary_clr);
+    box-shadow: 0 0 20px 2px var(--glow);
   }
   .icon-2:hover {
-    box-shadow: 0 0 20px 2px var(--secondary_clr);
+    box-shadow: 0 0 20px 2px var(--glow);
   }
 }
 @media (max-width: 750px) {
@@ -226,6 +239,7 @@ header {
   .nav-toggle-btn {
     display: inline-block;
     z-index: 999;
+    --nav-toggler-clr: red;
   }
   .nav-toggle-btn input {
     display: none;
@@ -238,7 +252,7 @@ header {
     content: "\f5fd";
 
     font-size: var(--font-size-icon);
-    color: var(--secondary_clr);
+    color: var(--nav-toggler-clr);
   }
   .nav-toggle-btn input:checked ~ label::after {
     content: "\f057";

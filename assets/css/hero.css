@@ -15,7 +15,7 @@
 
 .home {
   z-index: 0;
-  /* height: 1000vh; */
+  margin-top: 10rem;
 }
 .video-player {
   width: 889px;
@@ -99,26 +99,23 @@
 .video-controller input:checked ~ label::before {
   content: "\f28b";
 }
-.sound-controller {
+.fullscreen-controller {
   position: absolute;
   left: 5rem;
   bottom: -5rem;
   transition: all ease 0.5s;
-}
-.sound-controller input {
   display: none;
 }
-.sound-controller label::after {
-  content: "\f028";
+.fullscreen-controller input {
+  display: none;
+}
+.fullscreen-controller label::after {
+  content: "\f065";
   font: var(--fa-font-solid);
 
   color: var(--primary_clr);
   font-size: var(--font-size-icon);
   cursor: pointer;
-}
-
-.sound-controller input:checked ~ label::after {
-  content: "\f6a9";
 }
 
 @media (max-width: 880px) {
@@ -132,11 +129,8 @@
     left: 3rem;
   }
   .video-controller,
-  .sound-controller {
+  .fullscreen-controller {
     bottom: -2rem;
-  }
-  .sound-controller {
-    left: 15%;
   }
   .video-player .txt-overlay .txt h1 {
     margin-bottom: 1rem;
@@ -156,7 +150,7 @@
     width: 60%;
   }
   .video-controller,
-  .sound-controller {
+  .fullscreen-controller {
     bottom: -1rem;
   }
 

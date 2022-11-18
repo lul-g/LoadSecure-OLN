@@ -13,7 +13,6 @@
 
 .home {
   z-index: 0;
-  height: 1000vh;
 }
 .video-player {
   width: 889px;
@@ -21,10 +20,9 @@
   width: 90%;
   position: relative;
   overflow-x: hidden;
-  margin: 0 auto;
+  margin: 10rem auto;
 
   border-radius: 20px;
-  /* box-shadow: 0 0 20px 10px var(--secondary_clr); */
   transition: all 0.5s ease-in-out;
 }
 .video-player video {
