@@ -23,6 +23,7 @@
 .footer {
   position: relative;
   padding: 0 4rem 6rem 4rem;
+  margin: 4rem auto 0 auto;
 }
 
 .footer .btm {
@@ -107,15 +108,18 @@
   transition: all ease 0.3s;
   color: var(--primary_clr);
 }
-
+.footer > a {
+  font-weight: 400;
+}
 .footer .btn-2 {
   cursor: pointer;
   background-color: var(--txt-clr);
   width: fit-content;
-  display: inline;
+  display: block;
+  margin-top: 3rem;
 }
 .footer .btn-2:hover {
-  box-shadow: 0 0 20px 3px var(--main_bg_clr);
+  box-shadow: 0 0 10px 3px var(--main_bg_clr);
 }
 .copyright_section {
   border-top: 1px solid var(--main_bg_clr);
@@ -165,13 +169,13 @@
   transition: ease 0.3s all;
   transition-delay: 0.5s;
 
-  margin-top: 2rem;
+  margin-top: 3rem;
   width: 10%;
   position: relative;
 }
-.privacy a::after {
+.privacy div::after {
   font: var(--fa-font-solid);
-  content: "\f177";
+  /* content: "\f177"; */
   position: absolute;
   top: 0.9rem;
   left: 7rem;
@@ -181,7 +185,7 @@
   opacity: 1;
   transition: 0.3s 0.7s ease all;
 }
-.privacy a:hover::after {
+.privacy div:hover::after {
   opacity: 0;
   transition: 0.3s ease all;
 }
@@ -194,13 +198,11 @@
     transform: translate(-2rem);
   }
 }
-.privacy a {
+.privacy div {
   font-size: 25px;
   font-weight: 300;
   color: var(--primary_clr);
-}
-.privacy a:hover {
-  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .privacy:hover > .privacy-links {

@@ -24,6 +24,7 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  margin: 6rem auto;
 }
 .mobile_app h1,
 h3 {
@@ -33,7 +34,6 @@ h3 {
 }
 .mobile_app h1 {
   font-weight: 400;
-  margin: 2rem 0 0 0;
   font-size: var(--font-size-header);
 }
 .mobile_app h3 {
@@ -60,6 +60,9 @@ h3 {
 .mobile_app .zone div p {
   margin: 2rem 0;
   line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  color: var(--secondary_clr);
   position: relative;
 }
 /* .mobile_app .zone div p::before {
