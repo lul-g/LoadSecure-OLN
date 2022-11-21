@@ -48,9 +48,11 @@ h3 {
 
   padding: 2rem;
 }
-/* .mobile_app .zone img {
-  border-radius: 30px;
-} */
+.mobile_app .zone img {
+  border-radius: 20px;
+  width: 350px;
+  object-fit: contain;
+}
 .mobile_app .zone div {
   margin: 0 0 0 4rem;
   width: 50%;
