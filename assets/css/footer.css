@@ -80,7 +80,7 @@
 }
 
 .footer .socials {
-  width: 150%;
+  /* width: 150%; */
   color: var(--primary_clr);
   font-weight: 300;
 }
@@ -93,7 +93,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 60%;
+  width: 100%;
   max-width: 500px;
 }
 .footer .socials ul li i {
@@ -104,7 +104,7 @@
 }
 .footer .socials ul li i:hover {
   transform: scale(1.2);
-  transition: all ease 0.3s;
+  transition: all ease-in-out 0.3s;
   color: var(--primary_clr);
 }
 .footer > a {
@@ -145,13 +145,15 @@
   position: fixed;
   bottom: 8rem;
   right: 5rem;
-  background: var(--primary_clr);
+  background: var(--main_bg_clr);
   width: 50px;
   height: 50px;
   border-radius: 50%;
   cursor: pointer;
   transform: translate(10rem, 10rem);
   transition: all ease-in-out 0.3s;
+
+  border: #214551 2px solid;
 }
 .to-top-btn::before {
   font: var(--fa-font-solid);
@@ -164,41 +166,18 @@
 }
 
 .to-top-btn:hover {
-  opacity: 0.85;
+  background: var(--primary_clr);
 }
+
 .privacy {
   position: relative;
   cursor: pointer;
-  transition: ease 0.3s all;
+  transition: ease-in-out 0.3s all;
   transition-delay: 0.5s;
   width: 10%;
   position: relative;
 }
-.privacy div::after {
-  font: var(--fa-font-solid);
-  /* content: "\f177"; */
-  position: absolute;
-  top: 0.9rem;
-  left: 7rem;
-  font-size: 20px;
-  color: var(--main_bg_clr);
-  animation: point 0.8s ease infinite alternate;
-  opacity: 1;
-  transition: 0.3s 0.7s ease all;
-}
-.privacy div:hover::after {
-  opacity: 0;
-  transition: 0.3s ease all;
-}
 
-@keyframes point {
-  0% {
-    transform: translate(0);
-  }
-  100% {
-    transform: translate(-2rem);
-  }
-}
 .privacy div {
   font-weight: 300;
   cursor: pointer;
@@ -251,6 +230,22 @@
   left: 0 !important;
   top: 0;
 }
+
+.newsletter-form.show-newsletter {
+  transform: scale(1);
+  width: auto;
+  height: auto;
+  transition: 0.3s ease-in-out all;
+  background: white;
+  padding: 1rem;
+  margin: 1rem;
+}
+.newsletter-form {
+  transform: scale(0);
+  width: 0;
+  height: 0;
+}
+
 @media (max-width: 1100px) {
   .copyright {
     justify-content: flex-start;
@@ -274,7 +269,7 @@
 }
 @media (max-width: 550px) {
   .footer .socials ul {
-    width: 60% !important;
+    width: 90% !important;
   }
   .copyright {
     align-items: flex-start;

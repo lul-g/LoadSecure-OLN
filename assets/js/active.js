@@ -104,7 +104,19 @@ let to_top_btn = document.querySelector(".to-top-btn");
 to_top_btn.addEventListener("click", () =>
   window.scrollTo({ top: 0, behavior: "smooth" })
 );
+// *newsletter
+let newsletter_toggler = document.querySelector(".footer .btn-2");
+let newsletter_form = document.querySelector(".newsletter-form");
 
+newsletter_toggler.addEventListener("click", () => {
+  newsletter_form.classList.toggle("show-newsletter");
+
+  if (getComputedStyle(newsletter_form).width !== "0px") {
+    newsletter_toggler.textContent = "Close This Form";
+  } else {
+    newsletter_toggler.textContent = "Join Our Newsletter";
+  }
+});
 // * scroll header color change  || to-top-btn in-out of view
 let section_header = document.querySelector(".section_header");
 let extra_nav = document.querySelector(".extra_nav");
@@ -136,7 +148,18 @@ window.addEventListener("scroll", () => {
 
     nav_txt.style.setProperty("--icon-clr", "#dae4f1");
     nav.style.setProperty("--glow", "#dae4f1");
+    nav.style.setProperty("--glow-invert", "#dae4f1");
 
+    if (screen_size.width > 750) {
+      document.querySelectorAll(".nav-btns").forEach((btn) => {
+        btn.addEventListener("mouseover", () => {
+          btn.style.boxShadow = "0 0 20px 2px white";
+        });
+        btn.addEventListener("mouseout", () => {
+          btn.style.boxShadow = "none";
+        });
+      });
+    }
     document.getElementById("img-logo").src = "assets/img/loadsecure.png";
     document.getElementById("img-logo").style.width = "4rem";
     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#dae4f1");
@@ -155,7 +178,17 @@ window.addEventListener("scroll", () => {
 
       nav_txt.style.setProperty("--icon-clr", "#455c66");
       nav.style.setProperty("--glow", "#455c66");
+      nav.style.setProperty("--glow-invert", "#214551");
+      document.querySelectorAll(".nav-btns").forEach((btn) => {
+        btn.addEventListener("mouseover", () => {
+          btn.style.boxShadow = "0 0 20px 2px #455c66";
+        });
+        btn.addEventListener("mouseout", () => {
+          btn.style.boxShadow = "none";
+        });
+      });
     }
+
     document.getElementById("img-logo").src = "assets/img/logo.png";
     document.getElementById("img-logo").style.width = "8rem";
     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#455c66");

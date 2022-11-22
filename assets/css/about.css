@@ -85,7 +85,6 @@
   flex-direction: column;
   text-align: center;
 
-  background-color: var(--secondary_clr);
   background: linear-gradient(#455c66 30%, #dae4f1);
   /* box-shadow: 0 0 20px 10px var(--primary_clr); */
   height: 30vh;
@@ -102,7 +101,8 @@
   text-transform: uppercase;
 }
 .about .btm .btn-2:hover {
-  box-shadow: 0 0 15px 2px var(--primary_clr);
+  background: hsl(44, 99%, 47%);
+  box-shadow: none;
 }
 
 /* TODO adjust to screen --- simplify-prolly can use clamp*/

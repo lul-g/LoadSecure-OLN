@@ -7,7 +7,6 @@
   --secondary_clr: #455c66;
   --third_clr: #1d1836;
   --main_bg_clr: #dae4f1;
-
   --font-size-icon: 30px;
 
   --max-screen-width: 1366px;
@@ -79,6 +78,7 @@ header {
   justify-content: flex-end;
   width: 80%;
   --glow: #455c66;
+  --glow-invert: #214551;
 }
 .nav li:not(:nth-child(5)) {
   margin-right: 3rem;
@@ -104,7 +104,7 @@ header {
   font-size: larger;
   padding-left: 0.5rem;
   display: inline-block;
-  transition: all 0.3s 0.5s ease;
+  transition: transform 0.3s 0.5s ease;
 }
 .nav-txt:first-child:hover::after {
   transform: rotate(90deg);
@@ -140,26 +140,27 @@ header {
 }
 
 .btn-1 {
-  background: var(--secondary_clr);
-  color: var(--main_bg_clr);
+  /* background: var(--secondary_clr); */
+  border: 2px solid var(--glow-invert);
+  color: var(--glow-invert);
 
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .btn-1:hover {
-  box-shadow: 0 0 20px 2px var(--glow);
+  box-shadow: 0 0 20px 2px var(--secondary_clr);
 }
 .btn-2:hover {
-  box-shadow: 0 0 20px 2px var(--glow);
+  box-shadow: 0 0 20px 2px var(--secondary_clr);
 }
 .btn-2 {
   background: var(--primary_clr);
   color: var(--secondary_clr);
-
+  border: 2px solid var(--secondary_clr);
   padding: 0.5rem 1rem;
   border-radius: 50px;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 .nav > li:nth-child(6),
 .nav li:nth-child(7),
@@ -171,15 +172,18 @@ header {
   display: none;
 }
 .icon-1 {
-  background-color: var(--secondary_clr);
+  background-color: var(--main_bg_clr);
+  border: 2px var(--secondary_clr) solid;
   border-radius: 50%;
   padding: 1rem;
-  color: var(--main_bg_clr);
+  color: var(--secondary_clr);
   text-align: center;
   line-height: 1rem;
 }
 .icon-2 {
   background-color: var(--primary_clr);
+  border: 2px solid var(--secondary_clr);
+
   border-radius: 50%;
   padding: 1rem;
   color: var(--secondary_clr);
@@ -204,10 +208,12 @@ header {
     transition: all 0.3s ease;
   }
   .icon-1:hover {
-    box-shadow: 0 0 20px 2px var(--glow);
+    box-shadow: inset 10px 0 0px var(--secondary_clr);
+    border-color: var(--main_bg_clr);
   }
   .icon-2:hover {
-    box-shadow: 0 0 20px 2px var(--glow);
+    box-shadow: inset -10px 0 0px var(--secondary_clr);
+    border-color: var(--primary_clr);
   }
 }
 @media (max-width: 750px) {
@@ -257,12 +263,15 @@ header {
   .btn-1 {
     background-color: var(--main_bg_clr);
     color: var(--secondary_clr);
+    border-color: transparent;
   }
   .btn-1:hover {
     box-shadow: 0 0 25px 1px var(--main_bg_clr);
+    color: var(--secondary_clr);
   }
   .btn-2:hover {
     box-shadow: 0 0 25px 1px var(--primary_clr);
+    color: var(--secondary_clr);
   }
   .nav-txt a:hover {
     border-bottom: 2px solid var(--primary_clr);
