@@ -22,13 +22,15 @@
 .about .top {
   background: var(--main_bg_clr);
   /* background: mediumaquamarine; */
-  padding: 0 2rem;
+  margin: 4rem auto;
+  padding: 3rem;
 }
 .about .top h1 {
   text-align: center;
   font-size: var(--font-size-header);
   color: var(--secondary_clr);
-  line-height: 15rem;
+  line-height: 3rem;
+  margin-bottom: 4rem;
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -56,7 +58,7 @@
   box-shadow: 0 0 10px 5px var(--secondary_clr);
 }
 
-.about .card img {
+.about .card:nth-child(2) img {
   object-fit: contain;
   width: 110px;
   height: 110px;
@@ -66,9 +68,12 @@
   color: var(--secondary_clr);
   font-size: var(--font-size-header-2);
   margin: 1rem 0;
+  font-weight: 500;
 }
 .about .card p {
   line-height: 2.2rem;
+  font-weight: 400;
+  color: var(--secondary_clr);
   width: 90%;
   word-wrap: break-word;
 }
@@ -85,7 +90,6 @@
   /* box-shadow: 0 0 20px 10px var(--primary_clr); */
   height: 30vh;
   max-height: 200px;
-  margin-top: 5rem;
 }
 .about .btm p {
   font-size: var(--font-size-p);
@@ -143,13 +147,16 @@
     width: 100%;
   }
   .about .top h1 {
-    line-height: 5rem;
     margin: 2rem 0;
   }
 }
 @media (max-width: 550px) {
+  .about .top h1 {
+    font-size: 30px;
+  }
   .about .triad {
     width: 80%;
+    min-width: 260px !important;
   }
   .about .card {
     height: 550px;

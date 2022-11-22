@@ -88,17 +88,17 @@ video.onended = () => {
 
 // *nav-bar txt colors on window resize
 let nav_links = document.querySelectorAll(".nav-txt a");
-window.addEventListener("resize", () => {
-  if (screen_size.width <= 750) {
-    nav_links.forEach((nav_link) => {
-      nav_link.style.color = "#dae4f1";
-    });
-  } else {
-    nav_links.forEach((nav_link) => {
-      nav_link.style.color = "#455c66";
-    });
-  }
-});
+// window.addEventListener("resize", () => {
+//   if (screen_size.width <= 750) {
+//     nav_links.forEach((nav_link) => {
+//       nav_link.style.color = "#dae4f1";
+//     });
+//   } else {
+//     nav_links.forEach((nav_link) => {
+//       nav_link.style.color = "#455c66";
+//     });
+//   }
+// });
 //* to-top-btn
 let to_top_btn = document.querySelector(".to-top-btn");
 to_top_btn.addEventListener("click", () =>

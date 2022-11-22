@@ -75,7 +75,7 @@
   font-size: var(--font-size-p);
   font-weight: 300;
   width: 600px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   margin-bottom: 2rem;
 }
 
@@ -125,7 +125,7 @@
     --font-size-p: 15px;
   }
   .txt-overlay {
-    width: 70%;
+    width: 90%;
     left: 3rem;
   }
   .video-controller,
@@ -138,6 +138,7 @@
   .video-player .txt-overlay .txt p {
     width: 80%;
     margin-bottom: 1rem;
+    letter-spacing: 1px;
   }
 }
 @media (max-width: 550px) {
@@ -147,7 +148,7 @@
     --font-size-p: 12px;
   }
   .txt-overlay {
-    width: 60%;
+    width: 70%;
   }
   .video-controller,
   .fullscreen-controller {
@@ -165,6 +166,9 @@
 }
 
 @media (max-width: 420px) {
+  .txt-overlay {
+    width: 55%;
+  }
   .video-player .txt-overlay .txt h1 {
     margin-bottom: 0.2rem;
     font-size: calc(var(--font-size-p) + 3px);
