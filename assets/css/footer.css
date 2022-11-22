@@ -22,22 +22,21 @@
 
 .footer {
   position: relative;
-  padding: 0 4rem 6rem 4rem;
-  margin: 4rem auto 0 auto;
+  padding: 3rem 4rem;
+  margin: 4rem auto;
 }
 
 .footer .btm {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5rem;
-  margin: 6rem 0;
 
   color: var(--txt-clr);
 }
 .footer .box {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   gap: 4rem;
 }
@@ -81,7 +80,7 @@
 }
 
 .footer .socials {
-  width: 100%;
+  width: 150%;
   color: var(--primary_clr);
   font-weight: 300;
 }
@@ -116,7 +115,7 @@
   background-color: var(--txt-clr);
   width: fit-content;
   display: block;
-  margin-top: 3rem;
+  margin: 3rem 0;
 }
 .footer .btn-2:hover {
   box-shadow: 0 0 10px 3px var(--main_bg_clr);
@@ -131,7 +130,11 @@
 }
 
 .copyright {
-  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 2rem 4rem;
   background: var(--secondary_clr);
 }
 .copyright p {
@@ -168,8 +171,6 @@
   cursor: pointer;
   transition: ease 0.3s all;
   transition-delay: 0.5s;
-
-  margin-top: 3rem;
   width: 10%;
   position: relative;
 }
@@ -199,9 +200,7 @@
   }
 }
 .privacy div {
-  font-size: 25px;
   font-weight: 300;
-  color: var(--primary_clr);
   cursor: pointer;
 }
 
@@ -214,8 +213,8 @@
 }
 .privacy-links {
   position: absolute;
-  left: 5rem;
-  top: 2rem;
+  left: -17rem;
+  top: -10rem;
   background: #dedede;
   border-radius: 20px;
   width: 270px;
@@ -247,24 +246,40 @@
   color: rgb(7, 151, 161);
   transition: all linear 0.1s;
 }
-
+.chat-bot {
+  position: fixed;
+  left: 0 !important;
+  top: 0;
+}
+@media (max-width: 1100px) {
+  .copyright {
+    justify-content: flex-start;
+    gap: 10rem;
+  }
+}
 @media (max-width: 800px) {
   .footer .btm {
     grid-template-columns: repeat(1, 1fr);
     place-items: start;
   }
-
-  .privacy:hover {
-    margin-bottom: 10rem;
-    transition: ease 0.3s all;
+  .copyright {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    z-index: 999;
+  }
+  .privacy-links {
+    left: 2rem;
   }
 }
 @media (max-width: 550px) {
   .footer .socials ul {
-    width: 80% !important;
+    width: 60% !important;
   }
-  .privacy-links {
-    top: 3rem;
-    left: 0;
+  .copyright {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    gap: 5rem;
+    z-index: 999;
   }
 }

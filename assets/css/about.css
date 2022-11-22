@@ -81,7 +81,7 @@
   text-align: center;
 
   background-color: var(--secondary_clr);
-  /* background: linear-gradient(#455c66 30%, #dae4f1); */
+  background: linear-gradient(#455c66 30%, #dae4f1);
   /* box-shadow: 0 0 20px 10px var(--primary_clr); */
   height: 30vh;
   max-height: 200px;
