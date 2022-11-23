@@ -118,7 +118,7 @@ header {
   transform: scale(0);
   transition: all 0.3s 0.5s ease;
 
-  background: var(--secondary_clr);
+  background: #214551;
   text-transform: uppercase;
   border-radius: 15px;
   padding: 0 1rem;

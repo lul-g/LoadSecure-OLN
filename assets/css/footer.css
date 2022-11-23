@@ -1,7 +1,4 @@
 .section_footer {
-  display: grid;
-  place-items: start;
-
   --primary_clr: #fec013;
   --secondary_clr: #214551;
   --third_clr: #1d1836;
@@ -16,12 +13,11 @@
   --max-screen-width: 1366px;
 
   background-color: var(--secondary_clr);
-  border-top-right-radius: 20px;
-  border-top-left-radius: 20px;
+
+  position: relative;
 }
 
 .footer {
-  position: relative;
   padding: 3rem 4rem;
   margin: 4rem auto;
 }
