@@ -44,45 +44,26 @@ window.addEventListener("scroll", () => {
   if (windowPos > 0) {
     section_header.classList.add("scrolled");
 
-    nav_links.forEach((nav_link) => {
-      nav_link.style.color = "#dae4f1";
-      nav_link.style.borderColor = "#dae4f1";
-    });
-
-    extra_nav.style.background = "#214551";
-    extra_nav_child.forEach((child) => {
-      child.style.color = "#dae4f1";
-      child.style.borderColor = "#dae4f1";
-    });
-
-    nav_txt.style.setProperty("--icon-clr", "#dae4f1");
-    nav.style.setProperty("--glow", "#dae4f1");
-    nav.style.setProperty("--glow-invert", "#dae4f1");
-
-    document.getElementById("img-logo").src = "assets/img/loadsecure.png";
-    document.getElementById("img-logo").style.width = "4rem";
-    // nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#dae4f1");
-  } else {
-    section_header.classList.remove("scrolled");
-
-    if (screen_size.width > 750) {
-      nav_links.forEach((nav_link) => {
-        nav_link.style.color = "#dae4f1";
-        nav_link.style.borderColor = "#dae4f1";
-      });
+    if (screen_size.width <= 750) {
       extra_nav.style.background = "#dae4f1";
       extra_nav_child.forEach((child) => {
         child.style.color = "#214551";
         child.style.borderColor = "#214551";
       });
-
-      nav_txt.style.setProperty("--icon-clr", "#dae4f1");
-      nav.style.setProperty("--glow", "#455c66");
-      nav.style.setProperty("--glow-invert", "#214551");
+    } else {
+      extra_nav.style.background = "#214551";
+      extra_nav_child.forEach((child) => {
+        child.style.color = "#dae4f1";
+        child.style.borderColor = "#dae4f1";
+      });
     }
+  } else {
+    section_header.classList.remove("scrolled");
 
-    document.getElementById("img-logo").src = "assets/img/loadsecure.png";
-    document.getElementById("img-logo").style.width = "4rem";
-    // nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#455c66");
+    extra_nav.style.background = "#dae4f1";
+    extra_nav_child.forEach((child) => {
+      child.style.color = "#214551";
+      child.style.borderColor = "#214551";
+    });
   }
 });

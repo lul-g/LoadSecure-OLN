@@ -164,9 +164,10 @@ window.addEventListener("scroll", () => {
     section_header.classList.remove("scrolled");
 
     if (screen_size.width > 750) {
+      console.log(screen_size.width);
       nav_links.forEach((nav_link) => {
-        nav_link.style.color = "#455c66";
-        nav_link.style.borderColor = "#455c66";
+        nav_link.style.color = "#214551";
+        nav_link.style.borderColor = "#214551";
       });
       extra_nav.style.background = "#214551";
       extra_nav_child.forEach((child) => {

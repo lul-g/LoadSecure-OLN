@@ -250,7 +250,9 @@ header {
   .extra_nav > li > a {
     color: var(--secondary_clr);
   }
-
+  .extra_nav > li > a:hover {
+    border-color: var(--secondary_clr);
+  }
   .extra_nav {
     top: 2rem;
     left: 8rem;

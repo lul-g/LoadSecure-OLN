@@ -20,10 +20,211 @@
 
     <!-- *css -->
     <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/footer.css" />
     <link rel="stylesheet" href="/assets/css/shippers.css" />
 
     <!-- *js -->
-    <script defer src="/assets/js/active.js"></script>
+    <script defer src="/assets/js/log_active.js"></script>
   </head>
-  <body></body>
+  <body>
+    <section class="section_header">
+      <header class="header container" id="header">
+        <a href="/" class="logo">
+          <img
+            id="img-logo"
+            src="assets/img/loadsecure.png"
+            alt="Load Secure Systems is your real-time visibility solution. Our logo represents not only the improved physical security of your loads but also the increased feeling of security that you will have when working with Load Secure Systems."
+          />
+        </a>
+        <ul class="nav">
+          <li class="nav-txt">
+            <a href="index.html#about"
+              >CUSTOMERS
+              <ul class="extra_nav">
+                <li>
+                  <a class="extra_nav_child" href="/shippers.html">Shippers</a>
+                </li>
+                <li>
+                  <a class="extra_nav_child" href="/logistics.html"
+                    >Logistics</a
+                  >
+                </li>
+              </ul>
+            </a>
+          </li>
+          <li class="nav-txt">
+            <a href="index.html#mobile_app">MOBILE APP</a>
+          </li>
+          <li class="nav-txt"><a href="index.html#portal">PORTAL</a></li>
+          <li class="glow-btn nav-btn">
+            <a target="_blank" href="/demo.html" class="btn-1" href=""
+              >Request a Demo</a
+            >
+          </li>
+          <li class="glow-btn nav-btn">
+            <a
+              class="btn-2"
+              target="_blank"
+              href="https://portal.loadsecuresystems.com/login "
+              >Log In to Portal</a
+            >
+          </li>
+          <li class="glow-btn">
+            <a
+              target="_blank"
+              href="/demo.html"
+              class="nav-btn-icon icon-1"
+              href=""
+              ><i class="fa-solid fa-rocket"></i
+            ></a>
+          </li>
+          <li class="glow-btn">
+            <a
+              class="nav-btn-icon icon-2"
+              target="_blank"
+              href="https://portal.loadsecuresystems.com/login "
+              ><i class="fa-solid fa-right-to-bracket"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="nav-toggle-btn">
+          <input
+            onclick="toggle_nav()"
+            type="checkbox"
+            name=""
+            id="nav_toggler"
+          />
+          <label for="nav_toggler"></label>
+        </div>
+      </header>
+    </section>
+    <section class="section_main">
+      <section class="container main"></section>
+    </section>
+    <section class="section_footer">
+      <footer class="container footer">
+        <!-- <div class="logo">
+            <img src="/assets/img/loadsecure.png" alt="">
+            <h5>LOAD SECURE <span>SYSTEMS</span> </h5>
+          </div> -->
+        <div class="btm">
+          <div class="contact">
+            <h1>Get connected</h1>
+            <ul>
+              <li>
+                <i class="fa-solid fa-phone"></i><span>(888) 304 -3530</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><span>support@loadsecuresystems.com</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-paper-plane"></i
+                ><span>#14858 1623 Dalton Ave, Cincinnati, Ohio 45234</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-hourglass-start"></i
+                ><span
+                  >Monday–Friday: 9:00AM–5:00PM EST Saturday & Sunday:
+                  Unavailable</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="about">
+            <h1>about us</h1>
+            <p>
+              Our collaborative team focuses on providing real-time data for
+              your supply chain from warehousing, to transportation, to fleet
+              management, and more.
+            </p>
+            <div class="btn-2">Join Our Newsletter</div>
+
+            <div class="newsletter-form">
+              <script
+                charset="utf-8"
+                type="text/javascript"
+                src="//js.hsforms.net/forms/embed/v2.js"
+              ></script>
+              <script>
+                hbspt.forms.create({
+                  region: "na1",
+                  portalId: "22370629",
+                  formId: "699383a5-4910-491c-8b87-1d407f61ca69",
+                });
+              </script>
+            </div>
+
+            <div class="box socials">
+              <ul>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.linkedin.com/company/load-secure-systems/"
+                    ><i class="fa-brands fa-linkedin-in"></i
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://twitter.com/LoadSecureSys"
+                    ><i class="fa-brands fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.instagram.com/loadsecuresystems/"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a target="_blank" href="https://www.facebook.com/LoadSecure"
+                    ><i class="fa-brands fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    target="_blank"
+                    href="https://www.youtube.com/channel/UCAH8iVSwIR0JBpxGMwbdC4A"
+                    ><i class="fa-brands fa-youtube"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <section class="copyright_section">
+        <div class="container copyright">
+          <p>&copy;2022 LoadSecureSystems</p>
+          <div class="privacy">
+            <div>Privacy</div>
+            <ul class="privacy-links">
+              <li>
+                <a target="_blank" href="http://t.ly/ZBvx"
+                  >Customer privacy policy</a
+                >
+              </li>
+              <li>
+                <a target="_blank" href="http://t.ly/BLAD"
+                  >Company User Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a target="_blank" href="http://t.ly/jZJx"
+                  >Driver Privacy Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+    <div class="to-top-btn"></div>
+    <div class="chat-bot">
+      <script
+        src="//code.tidio.co/5nwv7gwa9zedttigo8pkc7umtvu6n8vu.js"
+        async
+      ></script>
+    </div>
+  </body>
 </html>

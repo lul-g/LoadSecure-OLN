@@ -58,17 +58,25 @@
 .section_header .btn-2:hover {
   box-shadow: 0 0 20px 5px var(--main_bg_clr);
 }
+.extra_nav {
+  background: #dae4f1;
+}
+.extra_nav li a {
+  color: #455c66;
+}
+.extra_nav li a:hover {
+  border-color: #214551;
+}
 .logo img {
   width: 4rem;
 }
+
+/** logistics start */
 .main {
   padding: 10rem 3rem;
   margin: 4rem auto;
   position: relative;
 }
-
-/** logistics start */
-
 .first,
 .second,
 .third,
@@ -157,6 +165,12 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 5rem;
   }
+  .btn-1 {
+    color: var(--secondary_clr) !important;
+  }
+  .nav-txt:first-child::after {
+    color: var(--primary_clr);
+  }
 }
 
 .custom-shape-divider-top {
@@ -173,7 +187,8 @@
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  /* height: 150px; */
+  max-height: 180px;
 }
 
 .custom-shape-divider-top .shape-fill {
@@ -194,7 +209,8 @@
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  height: 150px;
+  /* height: 150px; */
+  max-height: 180px;
 }
 
 .custom-shape-divider-bottom .shape-fill {

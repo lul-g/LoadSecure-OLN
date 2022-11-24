@@ -1,0 +1,69 @@
+.section_main {
+  --primary_clr: #fec013;
+  --secondary_clr: #455c66;
+  --third_clr: #1d1836;
+  --txt-clr: white;
+  --main_bg_clr: #dae4f1;
+
+  --font-size-icon: 30px;
+  --font-size-header: 35px;
+  --font-size-header-2: 25px;
+  --font-size-p: 20px;
+
+  --max-screen-width: 1366px;
+
+  position: relative;
+  height: 100vh;
+}
+/** shared */
+.flex {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/** header modifications */
+.section_header {
+  background: #214551;
+}
+.nav-txt a {
+  color: var(--main_bg_clr);
+  font-weight: 300;
+}
+.nav-txt a:hover {
+  border-color: #dae4f1;
+}
+.nav-txt:first-child::after {
+  color: var(--main_bg_clr);
+}
+.nav-toggle-btn label::after {
+  color: var(--main_bg_clr);
+}
+.section_header .btn-1 {
+  border-color: var(--main_bg_clr);
+  color: var(--main_bg_clr);
+}
+.section_header .btn-1:hover {
+  box-shadow: 0 0 20px 5px var(--main_bg_clr);
+}
+.section_main .btn-2 {
+  border-color: var(--primary_clr);
+}
+.section_header .btn-2:hover {
+  box-shadow: 0 0 20px 5px var(--main_bg_clr);
+}
+.logo img {
+  width: 4rem;
+}
+.main {
+  padding: 10rem 3rem;
+  margin: 4rem auto;
+  position: relative;
+}
