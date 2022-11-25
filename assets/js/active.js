@@ -157,8 +157,7 @@ window.addEventListener("scroll", () => {
       });
     });
 
-    document.getElementById("img-logo").src = "assets/img/loadsecure.png";
-    document.getElementById("img-logo").style.width = "4rem";
+    document.getElementById("img-logo").src = "assets/img/logo-dark.png";
     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#dae4f1");
   } else {
     section_header.classList.remove("scrolled");
@@ -189,7 +188,6 @@ window.addEventListener("scroll", () => {
     }
 
     document.getElementById("img-logo").src = "assets/img/logo.png";
-    document.getElementById("img-logo").style.width = "8rem";
     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#455c66");
   }
 });

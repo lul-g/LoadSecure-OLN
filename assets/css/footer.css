@@ -233,8 +233,9 @@
   height: auto;
   transition: 0.3s ease-in-out all;
   background: white;
-  padding: 1rem;
+  padding: 2rem;
   margin: 1rem;
+  border-radius: 15px;
 }
 .newsletter-form {
   transform: scale(0);
