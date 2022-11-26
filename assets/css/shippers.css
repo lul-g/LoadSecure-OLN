@@ -59,9 +59,8 @@
 .section_header .btn-2:hover {
   box-shadow: 0 0 20px 5px var(--main_bg_clr);
 }
-.logo img {
-  width: 4rem;
-}
+
+/** shippers start */
 .main {
   padding: 10rem 3rem;
   margin: 4rem auto;
