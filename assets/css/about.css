@@ -55,7 +55,14 @@
   padding: 1rem;
   background-color: var(--main_bg_clr);
   border-radius: 15px;
-  box-shadow: 0 0 10px 5px var(--secondary_clr);
+  border: 5px solid var(--secondary_clr);
+  box-shadow: 10px 10px 0 0 var(--secondary_clr);
+  transition: 0.2s ease all;
+}
+.about .card:hover {
+  box-shadow: none;
+  /* border: 5px solid transparent; */
+  transform: translate(2px, 2px);
 }
 
 .about .card:nth-child(2) img {

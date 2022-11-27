@@ -13,7 +13,6 @@
   --max-screen-width: 1366px;
 
   position: relative;
-  height: 100vh;
 }
 /** shared */
 .flex {
@@ -25,8 +24,10 @@
 }
 .grid {
   display: grid;
-  place-items: center;
+
   grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+  place-items: center;
 }
 
 /** header modifications */
@@ -65,4 +66,240 @@
   padding: 10rem 3rem;
   margin: 4rem auto;
   position: relative;
+}
+.first,
+.second,
+.third {
+  padding: 3rem 0;
+}
+.first .btn-1 {
+  border: 2px solid var(--secondary_clr);
+  color: var(--secondary_clr);
+}
+
+.first .btn-1:hover {
+  background-color: var(--primary_clr);
+
+  box-shadow: none;
+}
+.boxes {
+  padding: 3rem 0;
+}
+.boxes .txt h1 {
+  font-size: clamp(25px, 30px, 35px);
+  margin-bottom: 0.5rem;
+  color: var(--secondary_clr);
+  width: 80%;
+}
+.boxes .txt p {
+  margin-bottom: 3rem;
+  color: var(--secondary_clr);
+  min-width: 382px;
+}
+
+.boxes .img {
+  max-width: 50%;
+  min-width: 330px;
+}
+.boxes img {
+  object-fit: fill;
+  width: 100%;
+}
+.box-grid {
+  margin: 5rem 0;
+}
+
+.box-grid h1 {
+  font-size: var(--font-size-header);
+  color: var(--secondary_clr);
+  font-weight: 500;
+  max-width: 250px;
+  margin-bottom: 2rem;
+}
+.box-grid .col h3 {
+  color: var(--secondary_clr);
+  position: relative;
+}
+.box-grid .col h3::before {
+  content: "";
+  width: 1%;
+  height: 80%;
+  background-color: var(--primary_clr);
+  color: var(--primary_clr);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.second .col-1 h3::before,
+.col-3 h3::before {
+  left: -3%;
+}
+.second .col-2 h3::before {
+  left: -5%;
+  width: 2%;
+}
+.box-grid ul,
+.box-grid p {
+  color: var(--secondary_clr);
+  margin-top: 1rem;
+}
+
+.box-grid ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.box-grid ul li {
+  position: relative;
+}
+.box-grid .col li::before {
+  content: "\f02b";
+  font: var(--fa-font-solid);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+}
+.box-grid .col-1 li::before,
+.col-3 li::before {
+  left: calc(-7px - 15px);
+}
+.box-grid .col-2 li::before {
+  left: calc(-14px - 15px);
+}
+.third .col h3::before {
+  left: -3%;
+}
+.third p {
+  width: 90%;
+  line-height: 2rem;
+  position: relative;
+  margin: 1.5rem 0;
+  color: var(--secondary_clr);
+}
+.second .col {
+  height: 220px;
+}
+.third .col {
+  height: 200px;
+}
+.fourth {
+  display: grid;
+  place-items: center;
+  /* border: 5px solid var(--secondary_clr); */
+  border-radius: 15px;
+  box-shadow: 10px 10px 0 0 var(--secondary_clr);
+  transition: 0.2s ease all;
+}
+.fourth:hover {
+  display: grid;
+  place-items: center;
+  transform: translate(2px, 2px);
+  box-shadow: none;
+}
+
+.fourth p {
+  width: 60%;
+  line-height: 2rem;
+  position: relative;
+  margin: 1.5rem 0;
+  color: var(--secondary_clr);
+}
+@media (max-width: 1100px) {
+  .boxes {
+    flex-direction: column;
+  }
+  .boxes.fourth {
+    flex-direction: column-reverse;
+  }
+  .boxes .txt h1 {
+    width: 60%;
+  }
+  .boxes .txt p {
+    min-width: 282px;
+  }
+  .boxes .txt {
+    min-width: 260px;
+  }
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+  .third .col {
+    height: 150px;
+  }
+}
+
+@media (max-width: 750px) {
+  .main {
+    padding: 2rem 3rem;
+  }
+  .boxes .txt h1 {
+    width: 100%;
+  }
+  .second .imgs {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+  .btn-1 {
+    color: var(--secondary_clr) !important;
+  }
+  .nav-txt:first-child::after {
+    color: var(--primary_clr);
+  }
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem !important;
+    justify-items: start;
+  }
+  .third .col {
+    height: 120px;
+  }
+}
+@media (max-width: 550px) {
+  .third .col {
+    height: 180px;
+  }
+}
+.custom-shape-divider-top {
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  /* height: 150px; */
+  max-height: 120px;
+}
+
+.custom-shape-divider-top .shape-fill {
+  fill: #214551;
+}
+.custom-shape-divider-bottom {
+  position: absolute;
+  bottom: -4.5rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotateX(180deg);
+  z-index: 999;
+}
+
+.custom-shape-divider-bottom svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  /* height: 150px; */
+  max-height: 120px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+  fill: #214551;
 }
