@@ -97,12 +97,11 @@
 .footer .socials ul li i {
   font-size: var(--font-size-icon);
   cursor: pointer;
-  transition: all ease 0.3s;
   color: var(--main_bg_clr);
 }
 .footer .socials ul li i:hover {
   transform: scale(1.2);
-  transition: all ease-in-out 0.3s;
+  transition: color linear 0.2s;
   color: var(--primary_clr);
 }
 .footer > a {

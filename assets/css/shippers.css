@@ -63,15 +63,15 @@
 
 /** shippers start */
 .main {
-  padding: 10rem 3rem;
+  padding: 5rem 3rem;
   margin: 4rem auto;
   position: relative;
 }
 .first,
-.second,
 .third {
   padding: 3rem 0;
 }
+
 .first .btn-1 {
   border: 2px solid var(--secondary_clr);
   color: var(--secondary_clr);
@@ -100,6 +100,7 @@
 .boxes .img {
   max-width: 50%;
   min-width: 330px;
+  max-height: 450px;
 }
 .boxes img {
   -o-object-fit: fill;
@@ -290,7 +291,7 @@
   overflow: hidden;
   line-height: 0;
   transform: rotateX(180deg);
-  z-index: 999;
+  z-index: 0;
 }
 
 .custom-shape-divider-bottom svg {
