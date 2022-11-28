@@ -37,6 +37,7 @@
   height: 100%;
   z-index: -1;
   border-radius: 15px;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .video-overlay {

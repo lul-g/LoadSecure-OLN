@@ -51,6 +51,7 @@ h3 {
 .mobile_app .zone img {
   border-radius: 20px;
   width: 350px;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 .mobile_app .zone div {

@@ -57,6 +57,7 @@
   } */
 .us .btm img {
   width: 50%;
+  -o-object-fit: contain;
   object-fit: contain;
   border-radius: 20px;
 }
@@ -74,6 +75,7 @@
   }
   .us .btm img {
     width: 80%;
+    -o-object-fit: contain;
     object-fit: contain;
   }
 }
