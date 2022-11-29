@@ -17,12 +17,12 @@
   z-index: 0;
   position: relative;
   margin: 8rem auto 4rem auto;
-  padding: 3rem;
+  padding: 3rem 0;
 }
 .video-player {
-  width: 889px;
+  /* width: 889px; */
   aspect-ratio: 1/0.56;
-  width: 90%;
+  width: 95%;
   position: relative;
   overflow-x: hidden;
   margin: 0 auto;
@@ -50,10 +50,9 @@
   border-radius: 15px;
   opacity: 0.7;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  /* width: 100%;
+  height: 100%; */
   z-index: 0;
 
   transition: all ease 0.5s;
@@ -85,28 +84,22 @@
 
 .video-controller {
   position: absolute;
-  bottom: -5rem;
+  bottom: 20%;
+  left: 10%;
   transition: all ease 0.5s;
 }
 .video-controller input {
   display: none;
 }
-.video-controller label::before {
-  content: "\f144";
+.video-controller label i {
   font: var(--fa-font-solid);
-
   color: var(--primary_clr);
   font-size: var(--font-size-icon);
   cursor: pointer;
 }
 
-.video-controller input:checked ~ label::before {
-  content: "\f28b";
-}
 .fullscreen-controller {
   position: absolute;
-  left: 5rem;
-  bottom: -5rem;
   transition: all ease 0.5s;
   display: none;
 }
@@ -123,63 +116,38 @@
 }
 
 @media (max-width: 880px) {
-  .video-player {
-    --font-size-icon: 25px;
-    --font-size-header: 30px;
-    --font-size-p: 15px;
-  }
   .txt-overlay {
     width: 90%;
     left: 3rem;
   }
-  .video-controller,
-  .fullscreen-controller {
-    bottom: -2rem;
-  }
-  .video-player .txt-overlay .txt h1 {
-    margin-bottom: 1rem;
-  }
   .video-player .txt-overlay .txt p {
     width: 80%;
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
   }
 }
-@media (max-width: 550px) {
-  .video-player {
-    --font-size-icon: 15px;
-    --font-size-header: 20px;
-    --font-size-p: 12px;
-  }
-  .txt-overlay {
-    width: 70%;
-  }
-  .video-controller,
-  .fullscreen-controller {
-    bottom: -1rem;
-  }
 
+@media (max-width: 750px) {
+  .txt-overlay {
+    width: 80%;
+  }
   .video-player .txt-overlay .txt h1 {
-    margin-bottom: 0.7rem;
+    font-size: 25px;
   }
   .video-player .txt-overlay .txt p {
     width: 100%;
-    margin-bottom: 0.7rem;
-    letter-spacing: 0.1rem;
+    font-size: 17px;
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   .txt-overlay {
     width: 55%;
   }
   .video-player .txt-overlay .txt h1 {
-    margin-bottom: 0.2rem;
-    font-size: calc(var(--font-size-p) + 3px);
+    font-size: 20px;
   }
   .video-player .txt-overlay .txt p {
     width: 140%;
-    font-size: calc(var(--font-size-p) - 3px);
+    font-size: 12px;
   }
 }
 .custom-shape-divider-top {

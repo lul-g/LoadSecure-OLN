@@ -14,6 +14,7 @@ let video_overlay = document.querySelector(".video-overlay");
 let video = document.querySelector("video");
 
 let play_btn = document.querySelector(".video-controller label");
+let play_btn_icon = document.querySelector(".video-controller label i");
 let play_btn_container = document.querySelector(".video-controller");
 
 let fullscreen_btn = document.querySelector(".fullscreen-controller label");
@@ -30,12 +31,13 @@ function video_play() {
     video_overlay.style.left = "110%";
     txt_overlay.style.transform = "translate(-200%)";
 
-    play_btn_container.style.top = "50%";
-    play_btn_container.style.left = "-5%";
-    fullscreen_btn_container.style.left = "-5%";
+    play_btn_icon.classList.replace("fa-circle-play", "fa-circle-pause");
+    play_btn_container.style.top = "40%";
+    play_btn_container.style.left = "3%";
+    fullscreen_btn_container.style.top = "60%";
+    fullscreen_btn_container.style.left = "3%";
 
     fullscreen_btn_container.style.display = "inline-block";
-    fullscreen_btn_container.style.top = "90%";
     // fullscreen
     fullscreen_btn.addEventListener("click", () => {
       if (video.requestFullscreen) {
@@ -54,26 +56,26 @@ function video_play() {
 
     video_overlay.style.left = "0";
     txt_overlay.style.transform = "translate(0)";
+    play_btn_container.style.top = "initial";
+    play_btn_container.style.left = "10%";
+    play_btn_container.style.bottom = "20%";
 
-    play_btn_container.style.top = "100%";
-    play_btn_container.style.left = "0%";
+    play_btn_icon.classList.replace("fa-circle-pause", "fa-circle-play");
 
     fullscreen_btn_container.style.display = "none";
-    fullscreen_btn_container.style.top = "100%";
   }
 }
 video.onended = () => {
   video.currentTime = 5.5;
 
-  video_player.style.width = "90%";
-  video_overlay.style.left = "0";
   txt_overlay.style.transform = "translate(0)";
 
-  play_btn_container.style.top = "100%";
-  play_btn_container.style.left = "0%";
+  play_btn_icon.classList.replace("fa-circle-pause", "fa-circle-play");
+  play_btn_container.style.top = "initial";
+  play_btn_container.style.left = "10%";
+  play_btn_container.style.bottom = "20%";
 
   fullscreen_btn_container.style.display = "none";
-  fullscreen_btn_container.style.top = "100%";
   if (screen_size.width >= 751) fullscreen_btn_container.style.left = "20%";
   else fullscreen_btn_container.style.left = "15%";
 };
