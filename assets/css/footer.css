@@ -64,13 +64,13 @@
   color: var(--txt-clr);
   font-size: 16px;
 }
-.footer .about {
+.footer .footer_about {
   display: inline;
 }
-.footer .btm .about h1 {
+.footer .btm .footer_about h1 {
   margin-bottom: 1rem;
 }
-.footer .btm .about p {
+.footer .btm .footer_about p {
   line-height: 2.5rem;
   letter-spacing: 0.1rem;
   font-weight: 200;

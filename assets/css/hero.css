@@ -15,7 +15,9 @@
 
 .home {
   z-index: 0;
-  margin-top: 7rem;
+  position: relative;
+  margin: 8rem auto 4rem auto;
+  padding: 3rem;
 }
 .video-player {
   width: 889px;
@@ -25,8 +27,10 @@
   overflow-x: hidden;
   margin: 0 auto;
 
-  border-radius: 15px;
-  /* box-shadow: 0 0 20px 10px var(--secondary_clr); */
+  border-radius: 20px;
+  border: 5px solid var(--primary_clr);
+  box-shadow: inset 0 0 0 1px var(--primary_clr);
+
   transition: all 0.5s ease-in-out;
 }
 .video-player video {
@@ -69,14 +73,13 @@
   font-weight: 400;
   font-size: var(--font-size-header);
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .txt-overlay p {
   color: var(--main_bg_clr);
   font-size: var(--font-size-p);
   font-weight: 300;
   width: 600px;
-  letter-spacing: 2px;
   margin-bottom: 2rem;
 }
 
@@ -181,7 +184,7 @@
 }
 .custom-shape-divider-top {
   position: absolute;
-  top: 6.5rem;
+  top: -8.2rem;
   left: 0;
   width: 100%;
   overflow: hidden;
@@ -193,7 +196,6 @@
   position: relative;
   display: block;
   width: calc(100% + 1.3px);
-  /* height: 150px; */
   max-height: 120px;
 }
 

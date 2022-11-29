@@ -19,11 +19,10 @@
   width: 100%;
 }
 
-.about .top {
+.about {
   background: var(--main_bg_clr);
-  /* background: mediumaquamarine; */
-  margin: 4rem auto;
-  padding: 3rem;
+  margin: 0 auto 8rem auto;
+  padding: 0 3rem 3rem 3rem;
 }
 .about .top h1 {
   text-align: center;
@@ -91,26 +90,29 @@
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  text-align: center;
 
-  background: linear-gradient(#455c66 30%, #dae4f1);
+  /* background: linear-gradient(#455c66 30%, #dae4f1); */
   /* box-shadow: 0 0 20px 10px var(--primary_clr); */
   height: 30vh;
   max-height: 200px;
+  margin-top: 4rem;
 }
 .about .btm p {
-  font-size: var(--font-size-p);
-  color: var(--txt-clr);
-
-  font-weight: 200;
-  width: 90%;
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--secondary_clr);
+  margin-bottom: 2rem;
+  max-width: 1144px;
+  text-align: center;
 }
 .about .btm .btn-2 {
   text-transform: uppercase;
+  border: 2px solid var(--secondary_clr);
+  box-shadow: none;
+  color: var(--secondary_clr);
 }
 .about .btm .btn-2:hover {
-  background: hsl(44, 99%, 47%);
-  box-shadow: none;
+  box-shadow: 0 0 20px 2px var(--secondary_clr) !important;
 }
 
 /* TODO adjust to screen --- simplify-prolly can use clamp*/
@@ -144,6 +146,9 @@
     height: 500px;
     width: 80%;
   }
+  .about .btm p {
+    font-size: 25px;
+  }
 }
 @media (max-width: 650px) {
   .about .triad {
@@ -168,10 +173,5 @@
   }
   .about .card {
     height: 550px;
-  }
-  .about .btm p {
-    width: 70%;
-    font-size: 18px;
-    letter-spacing: 0.07rem;
   }
 }

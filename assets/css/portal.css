@@ -14,36 +14,29 @@
   --font-size-p: 20px;
 
   --max-screen-width: 1366px;
-
-  background-color: var(--secondary_clr);
 }
 
 .portal {
-  padding: 3rem;
-  margin: 4rem auto;
+  margin: 0 auto 8rem auto;
+  padding: 0 3rem 3rem 3rem;
 }
 .portal h1 {
-  text-align: center;
   text-transform: uppercase;
-  font-size: var(--font-size-header);
-  font-weight: 300;
-  color: var(--txt-clr);
-  margin-bottom: 2rem;
+  font-size: 35px;
+  color: var(--secondary_clr);
+  margin-bottom: 0.5rem;
 }
 
 .portal .btm {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
 }
 .portal .btm div p {
-  width: 90%;
-  line-height: 2.5rem;
-  letter-spacing: 0.1rem;
-  font-weight: 200;
   position: relative;
-  color: var(--txt-clr);
-  margin: 2rem 0;
+  color: var(--secondary_clr);
+  margin: 0 0 3rem 0;
+  font-size: large;
 }
 /* .portal .btm div p::before {
   font: var(--fa-font-solid);
@@ -67,9 +60,10 @@
     flex-direction: column-reverse;
   }
   .portal .btm div {
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
-  .portal .btm div p {
+  .portal .btm div p,
+  h1 {
     width: 100%;
     margin-left: 1rem;
   }
