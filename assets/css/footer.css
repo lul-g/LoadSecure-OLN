@@ -99,11 +99,11 @@
   cursor: pointer;
   color: var(--main_bg_clr);
 }
-.footer .socials ul li i:hover {
+/* .footer .socials ul li i:hover {
   transform: scale(1.2);
   transition: color linear 0.2s;
   color: var(--primary_clr);
-}
+} */
 .footer > a {
   font-weight: 400;
 }
@@ -163,10 +163,10 @@
   color: var(--secondary_clr);
 }
 
-.to-top-btn:hover {
+/* .to-top-btn:hover {
   background: var(--primary_clr);
   transition: all ease 0.2s;
-}
+} */
 
 .privacy {
   position: relative;
@@ -182,13 +182,12 @@
   cursor: pointer;
 }
 
-.privacy:hover > .privacy-links {
-  /* opacity: 1; */
+/* .privacy:hover > .privacy-links {
   transform: scale(1);
   -webkit-font-smoothing: antialiased;
 
   transition: ease 0.3s all;
-}
+} */
 .privacy-links {
   position: absolute;
   left: -17rem;
@@ -219,11 +218,11 @@
 
   text-decoration: none;
 }
-.privacy-links li a:hover {
+/* .privacy-links li a:hover {
   text-decoration: underline;
   color: rgb(7, 151, 161);
   transition: all linear 0.1s;
-}
+} */
 .chat-bot {
   position: fixed;
   left: 0 !important;
@@ -276,5 +275,29 @@
     flex-direction: column-reverse;
     gap: 5rem;
     z-index: 999;
+  }
+}
+
+/** all hover effects */
+@media (hover: hover) {
+  .footer .socials ul li i:hover {
+    transform: scale(1.2);
+    transition: color linear 0.2s;
+    color: var(--primary_clr);
+  }
+  .privacy:hover > .privacy-links {
+    transform: scale(1);
+    -webkit-font-smoothing: antialiased;
+
+    transition: ease 0.3s all;
+  }
+  .to-top-btn:hover {
+    background: var(--primary_clr);
+    transition: all ease 0.2s;
+  }
+  .privacy-links li a:hover {
+    text-decoration: underline;
+    color: rgb(7, 151, 161);
+    transition: all linear 0.1s;
   }
 }
