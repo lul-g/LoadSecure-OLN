@@ -62,14 +62,11 @@ header {
   align-items: center;
 
   padding: 1rem 2rem;
-  /* background-color: var(--main_bg_clr); */
-
   position: -webkit-sticky;
-
   position: sticky;
   top: 0;
   z-index: 99;
-  width: 100%;
+  /* width: 100%; */
 
   margin-bottom: 5rem;
 }
@@ -93,19 +90,29 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  width: 80%;
+  /* justify-content: flex-end; */
+  /* width: 100%; */
   --glow: #455c66;
   --glow-invert: #214551;
   position: relative;
 }
-.nav li:not(:nth-child(5)) {
+.nav li {
   margin-right: 3rem;
 }
 .nav-txt {
   position: relative;
   letter-spacing: 2px;
   --icon-clr: #455c66;
+}
+.nav-phone {
+  margin-right: 0 !important;
+}
+.nav-phone i {
+  color: var(--primary_clr);
+}
+.nav-phone span {
+  color: var(--main_bg_clr);
+  padding-left: 0.5rem;
 }
 .nav-txt::before,
 .extra_nav_child::before {
@@ -194,11 +201,16 @@ header {
   border-radius: 15px;
   transition: all 0.3s ease;
 }
-.nav > li:nth-child(6),
-.nav li:nth-child(7),
+
 .nav-btn-icon {
   display: none;
   transition: all 0.3s ease;
+  cursor: pointer;
+}
+.nav-btn-icon i {
+  width: 100%;
+  height: 100%;
+  color: var(--secondary_clr);
 }
 .nav-toggle-btn {
   display: none;
@@ -207,12 +219,20 @@ header {
   background-color: var(--main_bg_clr);
   border: 2px var(--secondary_clr) solid;
   border-radius: 50%;
-  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
   color: var(--secondary_clr);
   text-align: center;
-  line-height: 1rem;
   position: relative;
 }
+.icon-1 a,
+.icon-2 a {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .icon-1::after {
   content: "Request a Demo";
   position: absolute;
@@ -224,7 +244,7 @@ header {
   width: 100px;
   padding: 1rem;
   border-radius: 10px;
-  transform: scale(0) translate(-3.5rem, 3rem);
+  transform: scale(0) translate(-1.5rem, 10rem);
 
   transition: all ease 0.3s 0.2s;
 }
@@ -239,7 +259,7 @@ header {
   width: 100px;
   padding: 1rem;
   border-radius: 10px;
-  transform: scale(0) translate(-3.5rem, 3rem);
+  transform: scale(0) translate(-1.5rem, 10rem);
 
   transition: all ease 0.3s 0.2s;
 }
@@ -248,32 +268,67 @@ header {
   border: 2px solid var(--secondary_clr);
 
   border-radius: 50%;
-  padding: 1rem;
+  width: 3rem;
+  height: 3rem;
   color: var(--secondary_clr);
   text-align: center;
-  line-height: 1rem;
   position: relative;
 }
 
-@media (max-width: 1000px) {
-  .nav li:not(:nth-child(5)) {
+@media (max-width: 1100px) {
+  .nav li {
     margin-right: 0;
   }
-  .nav li:not(:nth-child(7)) {
+  .nav li {
     margin-right: 2rem !important;
   }
 
+  .nav-phone span {
+    display: none;
+  }
+  .nav-phone {
+    background-color: var(--primary_clr);
+    border: 2px solid var(--secondary_clr);
+
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+
+    color: var(--secondary_clr);
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    align-items: center;
+  }
+  .nav-phone i {
+    color: var(--secondary_clr);
+  }
+  .nav-phone::after {
+    content: "(888)304-3530";
+    position: absolute;
+    top: 0.1rem;
+    left: -2rem;
+    background: #214551;
+    border: 2px solid var(--primary_clr);
+    color: var(--main_bg_clr);
+    font-weight: 400;
+    width: 100px;
+    padding: 1rem;
+    border-radius: 10px;
+    transform: scale(0) translate(-1.5rem, 10rem);
+
+    transition: all ease 0.3s 0.2s;
+  }
   .nav-btn {
     display: none;
   }
-  .nav > li:nth-child(6),
-  .nav li:nth-child(7),
   .nav-btn-icon {
     display: inline-block;
     transition: all 0.3s ease;
   }
 }
-@media (max-width: 750px) {
+@media (max-width: 900px) {
   /* ! header-align items remove to un-center logo and button */
   .nav {
     flex-direction: column;
@@ -306,9 +361,32 @@ header {
     top: 2rem;
     left: 8rem;
   }
-  .nav > li:nth-child(6),
-  .nav li:nth-child(7),
+
   .nav-btn-icon {
+    display: none;
+  }
+  .nav-phone span {
+    display: inline-block;
+    color: var(--main_bg_clr);
+  }
+  .nav-phone {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: inline-block;
+    width: auto;
+    border-radius: 0;
+  }
+  .nav-phone i {
+    color: var(--primary_clr);
+  }
+  .nav-phone::after {
+    content: "";
+  }
+  .nav-phone:hover {
+    border: none;
+  }
+  .nav-phone:hover::after {
     display: none;
   }
 
@@ -390,6 +468,10 @@ header {
     transition: all ease 0.3s;
   }
   .icon-2:hover::after {
+    transform: scale(1) translate(-3.5rem, 3rem);
+    transition: all ease 0.3s;
+  }
+  .nav-phone:hover::after {
     transform: scale(1) translate(-3.5rem, 3rem);
     transition: all ease 0.3s;
   }
