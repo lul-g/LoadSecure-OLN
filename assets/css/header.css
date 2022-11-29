@@ -185,12 +185,6 @@ header {
   border-radius: 15px;
   transition: all 0.3s ease;
 }
-.btn-1:hover {
-  border-radius: 0;
-}
-.btn-2:hover {
-  border-radius: 0;
-}
 .btn-2 {
   box-shadow: inset 0 0 0 2px var(--primary_clr);
   color: var(--primary_clr);
@@ -233,10 +227,6 @@ header {
 
   transition: all ease 0.3s 0.2s;
 }
-.icon-1:hover::after {
-  transform: scale(1) translate(-3.5rem, 3rem);
-  transition: all ease 0.3s;
-}
 .icon-2::after {
   content: "LogIn to Portal";
   position: absolute;
@@ -251,10 +241,6 @@ header {
   transform: scale(0) translate(-3.5rem, 3rem);
 
   transition: all ease 0.3s 0.2s;
-}
-.icon-2:hover::after {
-  transform: scale(1) translate(-3.5rem, 3rem);
-  transition: all ease 0.3s;
 }
 .icon-2 {
   background-color: var(--primary_clr);
@@ -284,14 +270,6 @@ header {
   .nav-btn-icon {
     display: inline-block;
     transition: all 0.3s ease;
-  }
-  .icon-1:hover {
-    box-shadow: inset 10px 0 0px var(--secondary_clr);
-    border-color: var(--main_bg_clr);
-  }
-  .icon-2:hover {
-    box-shadow: inset -10px 0 0px var(--secondary_clr);
-    border-color: var(--primary_clr);
   }
 }
 @media (max-width: 750px) {
@@ -390,12 +368,36 @@ header {
   color: var(--main_bg_clr);
   font-weight: 300;
 }
-.nav-txt a:hover {
-  border-color: #dae4f1;
-}
+
 .nav-txt:first-child::after {
   color: var(--main_bg_clr);
 }
 .nav-toggle-btn label::after {
   color: var(--main_bg_clr);
+}
+
+/** all hover effects */
+@media (hover: hover) {
+  .btn-1:hover {
+    border-radius: 0;
+  }
+  .btn-2:hover {
+    border-radius: 0;
+  }
+  .icon-1:hover::after {
+    transform: scale(1) translate(-3.5rem, 3rem);
+    transition: all ease 0.3s;
+  }
+  .icon-2:hover::after {
+    transform: scale(1) translate(-3.5rem, 3rem);
+    transition: all ease 0.3s;
+  }
+  .icon-1:hover {
+    box-shadow: inset 10px 0 0px var(--secondary_clr);
+    border-color: var(--main_bg_clr);
+  }
+  .icon-2:hover {
+    box-shadow: inset -10px 0 0px var(--secondary_clr);
+    border-color: var(--primary_clr);
+  }
 }

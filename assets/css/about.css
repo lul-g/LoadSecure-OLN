@@ -58,11 +58,6 @@
   box-shadow: 10px 10px 0 0 var(--secondary_clr);
   transition: 0.2s ease all;
 }
-.about .card:hover {
-  box-shadow: none;
-  /* border: 5px solid transparent; */
-  transform: translate(2px, 2px);
-}
 
 .about .card:nth-child(2) img {
   -o-object-fit: contain;
@@ -110,9 +105,6 @@
   border: 2px solid var(--secondary_clr);
   box-shadow: none;
   color: var(--secondary_clr);
-}
-.about .btm .btn-2:hover {
-  box-shadow: 0 0 20px 2px var(--secondary_clr) !important;
 }
 
 /* TODO adjust to screen --- simplify-prolly can use clamp*/
@@ -173,5 +165,15 @@
   }
   .about .card {
     height: 550px;
+  }
+}
+
+@media (hover: hover) {
+  .about .card:hover {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+  }
+  .about .btm .btn-2:hover {
+    box-shadow: 0 0 20px 2px var(--secondary_clr) !important;
   }
 }

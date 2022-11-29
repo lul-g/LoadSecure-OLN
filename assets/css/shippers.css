@@ -48,9 +48,6 @@
   color: var(--secondary_clr);
 }
 
-.first .btn-1:hover {
-  box-shadow: 0 0 20px 2px var(--secondary_clr) !important;
-}
 .boxes {
   padding: 3rem 0;
 }
@@ -161,12 +158,6 @@
   box-shadow: -10px 10px 0 0 var(--secondary_clr);
   transition: 0.2s ease all;
 }
-.fourth:hover {
-  display: grid;
-  place-items: center;
-  transform: translate(2px, 2px);
-  box-shadow: none;
-}
 
 .fourth p {
   width: 60%;
@@ -270,4 +261,16 @@
 
 .custom-shape-divider-bottom .shape-fill {
   fill: #214551;
+}
+
+@media (hover: hover) {
+  .first .btn-1:hover {
+    box-shadow: 0 0 20px 2px var(--secondary_clr) !important;
+  }
+  .fourth:hover {
+    display: grid;
+    place-items: center;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
 }
