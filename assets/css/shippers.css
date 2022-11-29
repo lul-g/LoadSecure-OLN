@@ -31,35 +31,6 @@
 }
 
 /** header modifications */
-.section_header {
-  background: #214551;
-}
-.nav-txt a {
-  color: var(--main_bg_clr);
-  font-weight: 300;
-}
-.nav-txt a:hover {
-  border-color: #dae4f1;
-}
-.nav-txt:first-child::after {
-  color: var(--main_bg_clr);
-}
-.nav-toggle-btn label::after {
-  color: var(--main_bg_clr);
-}
-.section_header .btn-1 {
-  border-color: var(--main_bg_clr);
-  color: var(--main_bg_clr);
-}
-.section_header .btn-1:hover {
-  box-shadow: 0 0 20px 5px var(--main_bg_clr);
-}
-.section_main .btn-2 {
-  border-color: var(--primary_clr);
-}
-.section_header .btn-2:hover {
-  box-shadow: 0 0 20px 5px var(--main_bg_clr);
-}
 
 /** shippers start */
 .main {
@@ -155,18 +126,18 @@
   position: relative;
 }
 .box-grid .col li::before {
-  content: "\f02b";
+  content: "\f48b";
   font: var(--fa-font-solid);
   position: absolute;
   top: 50%;
-  transform: translateY(-50%) rotate(90deg);
+  transform: translateY(-50%);
 }
 .box-grid .col-1 li::before,
 .col-3 li::before {
-  left: calc(-7px - 15px);
+  left: calc(-7px - 28px);
 }
 .box-grid .col-2 li::before {
-  left: calc(-14px - 15px);
+  left: calc(-14px - 18px);
 }
 .third .col h3::before {
   left: -3%;
@@ -242,9 +213,6 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
   }
-  .btn-1 {
-    color: var(--secondary_clr) !important;
-  }
   .nav-txt:first-child::after {
     color: var(--primary_clr);
   }
@@ -264,7 +232,7 @@
 }
 .custom-shape-divider-top {
   position: absolute;
-  top: -4rem;
+  top: -4.2rem;
   left: 0;
   width: 100%;
   overflow: hidden;

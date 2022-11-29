@@ -78,6 +78,17 @@ header {
 .logo img {
   width: 8rem;
 }
+.nav-pointer {
+  position: fixed;
+  width: 120px;
+  height: 5px;
+  padding: 0 2rem;
+  left: 42%;
+  top: 5rem;
+  background: red;
+  /* transform: translateX(50px); */
+}
+
 .nav {
   display: flex;
   align-items: center;
@@ -85,21 +96,44 @@ header {
   width: 80%;
   --glow: #455c66;
   --glow-invert: #214551;
+  position: relative;
 }
 .nav li:not(:nth-child(5)) {
   margin-right: 3rem;
 }
 .nav-txt {
+  position: relative;
   letter-spacing: 2px;
   --icon-clr: #455c66;
+}
+.nav-txt::before,
+.extra_nav_child::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  bottom: -0.5rem;
+  border-radius: 15px;
+  width: 100%;
+  height: 3px;
+  z-index: -1;
+  background: var(--primary_clr);
+  transform: scaleX(0);
+  transition: all ease 0.2s;
+}
+
+.nav-txt:hover::before,
+.extra_nav_child:hover::before {
+  transition: all ease 0.2s;
+  transform: scaleX(1);
+}
+.extra_nav_child {
+  position: relative;
 }
 .nav-txt a {
   color: var(--secondary_clr);
   font-weight: 300;
 }
-.nav-txt a:hover {
-  border-bottom: 2px solid var(--secondary_clr);
-}
+
 .nav-txt:first-child {
   position: relative;
 }
@@ -118,7 +152,7 @@ header {
 }
 .extra_nav {
   position: absolute;
-  top: 2rem;
+  top: 3rem;
   left: 0;
   opacity: 0;
   transform: scale(0);
@@ -129,6 +163,7 @@ header {
   border-radius: 15px;
   padding: 0 1rem;
   cursor: pointer;
+  border: 3px solid var(--primary_clr);
 }
 .extra_nav > li > a {
   color: var(--main_bg_clr);
@@ -136,9 +171,7 @@ header {
 .extra_nav > li {
   margin: 1rem;
 }
-.extra_nav > li > a:hover {
-  border-bottom: 2px solid var(--main_bg_clr);
-}
+
 .nav-txt:first-child:hover > .extra_nav {
   opacity: 1;
   transition: all 0.3s ease;
@@ -146,27 +179,25 @@ header {
 }
 
 .btn-1 {
-  /* background: var(--secondary_clr); */
-  border: 2px solid var(--glow-invert);
-  color: var(--glow-invert);
-
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  transition: all 0.4s ease;
+  box-shadow: inset 0 0 0 2px var(--main_bg_clr);
+  color: var(--main_bg_clr);
+  padding: 0.5rem 1.3rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
 .btn-1:hover {
-  box-shadow: 0 0 20px 2px var(--secondary_clr);
+  border-radius: 0;
 }
 .btn-2:hover {
-  box-shadow: 0 0 20px 2px var(--secondary_clr);
+  border-radius: 0;
 }
 .btn-2 {
-  background: var(--primary_clr);
-  color: var(--secondary_clr);
-  border: 2px solid var(--secondary_clr);
-  padding: 0.5rem 1rem;
-  border-radius: 50px;
-  transition: all 0.4s ease;
+  box-shadow: inset 0 0 0 2px var(--primary_clr);
+  color: var(--primary_clr);
+
+  padding: 0.5rem 1.3rem;
+  border-radius: 15px;
+  transition: all 0.3s ease;
 }
 .nav > li:nth-child(6),
 .nav li:nth-child(7),
@@ -191,7 +222,8 @@ header {
   content: "Request a Demo";
   position: absolute;
   left: -2rem;
-  background: rgba(69, 92, 102, 0.9);
+  background: rgba(33, 69, 81);
+  border: 2px solid var(--primary_clr);
   color: var(--main_bg_clr);
   font-weight: 400;
   width: 100px;
@@ -209,7 +241,8 @@ header {
   content: "LogIn to Portal";
   position: absolute;
   left: -2rem;
-  background: rgba(69, 92, 102, 0.9);
+  background: #214551;
+  border: 2px solid var(--primary_clr);
   color: var(--main_bg_clr);
   font-weight: 400;
   width: 100px;
@@ -289,15 +322,7 @@ header {
   .nav-txt:first-child::after {
     color: var(--main_bg_clr);
   }
-  .extra_nav {
-    background: var(--main_bg_clr);
-  }
-  .extra_nav > li > a {
-    color: var(--secondary_clr);
-  }
-  .extra_nav > li > a:hover {
-    border-color: var(--secondary_clr);
-  }
+
   .extra_nav {
     top: 2rem;
     left: 8rem;
@@ -307,22 +332,7 @@ header {
   .nav-btn-icon {
     display: none;
   }
-  .btn-1 {
-    background-color: var(--main_bg_clr);
-    color: var(--secondary_clr);
-    border-color: transparent;
-  }
-  .btn-1:hover {
-    box-shadow: 0 0 25px 1px var(--main_bg_clr);
-    color: var(--secondary_clr);
-  }
-  .btn-2:hover {
-    box-shadow: 0 0 25px 1px var(--primary_clr);
-    color: var(--secondary_clr);
-  }
-  .nav-txt a:hover {
-    border-bottom: 2px solid var(--primary_clr);
-  }
+
   .nav-txt:first-child::after {
     color: var(--primary_clr);
   }
@@ -367,7 +377,25 @@ header {
     position: absolute;
   }
   .extra_nav {
-    top: initial;
-    left: 0;
+    /* top: initial; */
+    left: 6rem;
   }
+}
+
+/** header modifications */
+.section_header {
+  background: #214551;
+}
+.nav-txt a {
+  color: var(--main_bg_clr);
+  font-weight: 300;
+}
+.nav-txt a:hover {
+  border-color: #dae4f1;
+}
+.nav-txt:first-child::after {
+  color: var(--main_bg_clr);
+}
+.nav-toggle-btn label::after {
+  color: var(--main_bg_clr);
 }

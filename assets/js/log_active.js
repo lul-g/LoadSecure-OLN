@@ -40,30 +40,4 @@ window.addEventListener("scroll", () => {
   } else {
     to_top_btn.style.transform = "translate(10rem, 10rem)";
   }
-
-  if (windowPos > 0) {
-    section_header.classList.add("scrolled");
-
-    if (screen_size.width <= 750) {
-      extra_nav.style.background = "#dae4f1";
-      extra_nav_child.forEach((child) => {
-        child.style.color = "#214551";
-        child.style.borderColor = "#214551";
-      });
-    } else {
-      extra_nav.style.background = "#214551";
-      extra_nav_child.forEach((child) => {
-        child.style.color = "#dae4f1";
-        child.style.borderColor = "#dae4f1";
-      });
-    }
-  } else {
-    section_header.classList.remove("scrolled");
-
-    extra_nav.style.background = "#dae4f1";
-    extra_nav_child.forEach((child) => {
-      child.style.color = "#214551";
-      child.style.borderColor = "#214551";
-    });
-  }
 });

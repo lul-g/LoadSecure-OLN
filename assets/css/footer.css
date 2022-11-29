@@ -109,16 +109,13 @@
 }
 .footer .btn-2 {
   cursor: pointer;
-  background-color: var(--txt-clr);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   display: block;
   margin: 3rem 0;
 }
-.footer .btn-2:hover {
-  box-shadow: 0 0 10px 3px var(--main_bg_clr);
-}
+
 .copyright_section {
   border-top: 1px solid var(--main_bg_clr);
   background: var(--secondary_clr);
@@ -152,7 +149,7 @@
   border-radius: 50%;
   cursor: pointer;
   transform: translate(10rem, 10rem);
-  transition: all ease-in-out 0.3s;
+  transition: all ease 0.2s;
 
   border: #214551 2px solid;
 }
@@ -168,6 +165,7 @@
 
 .to-top-btn:hover {
   background: var(--primary_clr);
+  transition: all ease 0.2s;
 }
 
 .privacy {

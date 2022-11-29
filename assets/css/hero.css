@@ -179,3 +179,24 @@
     font-size: calc(var(--font-size-p) - 3px);
   }
 }
+.custom-shape-divider-top {
+  position: absolute;
+  top: 6.5rem;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: -1;
+}
+
+.custom-shape-divider-top svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  /* height: 150px; */
+  max-height: 120px;
+}
+
+.custom-shape-divider-top .shape-fill {
+  fill: #214551;
+}

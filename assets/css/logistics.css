@@ -29,44 +29,6 @@
 }
 
 /** header modifications */
-.section_header {
-  background: #214551;
-}
-.nav-txt a {
-  color: var(--main_bg_clr);
-  font-weight: 300;
-}
-.nav-txt a:hover {
-  border-color: #dae4f1;
-}
-.nav-txt:first-child::after {
-  color: var(--main_bg_clr);
-}
-.nav-toggle-btn label::after {
-  color: var(--main_bg_clr);
-}
-.section_header .btn-1 {
-  border-color: var(--main_bg_clr);
-  color: var(--main_bg_clr);
-}
-.section_header .btn-1:hover {
-  box-shadow: 0 0 20px 5px var(--main_bg_clr);
-}
-.section_main .btn-2 {
-  border-color: var(--primary_clr);
-}
-.section_header .btn-2:hover {
-  box-shadow: 0 0 20px 5px var(--main_bg_clr);
-}
-.extra_nav {
-  background: #dae4f1;
-}
-.extra_nav li a {
-  color: #455c66;
-}
-.extra_nav li a:hover {
-  border-color: #214551;
-}
 
 /** logistics start */
 .main {
@@ -167,9 +129,6 @@
     grid-template-columns: repeat(1, 1fr);
     gap: 5rem;
   }
-  .btn-1 {
-    color: var(--secondary_clr) !important;
-  }
   .nav-txt:first-child::after {
     color: var(--primary_clr);
   }
@@ -177,7 +136,7 @@
 
 .custom-shape-divider-top {
   position: absolute;
-  top: -4rem;
+  top: -4.2rem;
   left: 0;
   width: 100%;
   overflow: hidden;

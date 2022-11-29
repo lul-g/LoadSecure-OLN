@@ -130,67 +130,69 @@ window.addEventListener("scroll", () => {
   } else {
     to_top_btn.style.transform = "translate(10rem, 10rem)";
   }
-
-  if (windowPos > 0) {
-    section_header.classList.add("scrolled");
-
-    nav_links.forEach((nav_link) => {
-      nav_link.style.color = "#dae4f1";
-      nav_link.style.borderColor = "#dae4f1";
-    });
-
-    extra_nav.style.background = "#dae4f1";
-    extra_nav_child.forEach((child) => {
-      child.style.color = "#455c66";
-      child.style.borderColor = "#455c66";
-    });
-
-    nav_txt.style.setProperty("--icon-clr", "#dae4f1");
-    nav.style.setProperty("--glow", "#dae4f1");
-    nav.style.setProperty("--glow-invert", "#dae4f1");
-    document.querySelectorAll(".nav-btns").forEach((btn) => {
-      btn.addEventListener("mouseover", () => {
-        btn.style.boxShadow = "0 0 20px 2px white";
-      });
-      btn.addEventListener("mouseout", () => {
-        btn.style.boxShadow = "none";
-      });
-    });
-
-    document.getElementById("img-logo").src = "assets/img/logo-dark.png";
-    nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#dae4f1");
-  } else {
-    section_header.classList.remove("scrolled");
-
-    if (screen_size.width > 750) {
-      console.log(screen_size.width);
-      nav_links.forEach((nav_link) => {
-        nav_link.style.color = "#214551";
-        nav_link.style.borderColor = "#214551";
-      });
-      extra_nav.style.background = "#214551";
-      extra_nav_child.forEach((child) => {
-        child.style.color = "#dae4f1";
-        child.style.borderColor = "#dae4f1";
-      });
-
-      nav_txt.style.setProperty("--icon-clr", "#455c66");
-      nav.style.setProperty("--glow", "#455c66");
-      nav.style.setProperty("--glow-invert", "#214551");
-      document.querySelectorAll(".nav-btns").forEach((btn) => {
-        btn.addEventListener("mouseover", () => {
-          btn.style.boxShadow = "0 0 20px 2px #455c66";
-        });
-        btn.addEventListener("mouseout", () => {
-          btn.style.boxShadow = "none";
-        });
-      });
-    }
-
-    document.getElementById("img-logo").src = "assets/img/logo.png";
-    nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#455c66");
-  }
 });
+
+//   if (windowPos > 0) {
+//     section_header.classList.add("scrolled");
+
+//     nav_links.forEach((nav_link) => {
+//       nav_link.style.color = "#dae4f1";
+//       nav_link.style.borderColor = "#dae4f1";
+//     });
+
+//     extra_nav.style.background = "#dae4f1";
+//     extra_nav_child.forEach((child) => {
+//       child.style.color = "#455c66";
+//       child.style.borderColor = "#455c66";
+//     });
+
+//     nav_txt.style.setProperty("--icon-clr", "#dae4f1");
+//     nav.style.setProperty("--glow", "#dae4f1");
+//     nav.style.setProperty("--glow-invert", "#dae4f1");
+//     document.querySelectorAll(".nav-btns").forEach((btn) => {
+//       btn.addEventListener("mouseover", () => {
+//         btn.style.boxShadow = "0 0 20px 2px white";
+//       });
+//       btn.addEventListener("mouseout", () => {
+//         btn.style.boxShadow = "none";
+//       });
+//     });
+
+//     document.getElementById("img-logo").src = "assets/img/logo-dark.png";
+//     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#dae4f1");
+//   } else {
+//     section_header.classList.remove("scrolled");
+
+//     if (screen_size.width > 750) {
+//       console.log(screen_size.width);
+//       nav_links.forEach((nav_link) => {
+//         nav_link.style.color = "#214551";
+//         nav_link.style.borderColor = "#214551";
+//       });
+//       extra_nav.style.background = "#214551";
+//       extra_nav_child.forEach((child) => {
+//         child.style.color = "#dae4f1";
+//         child.style.borderColor = "#dae4f1";
+//       });
+
+//       nav_txt.style.setProperty("--icon-clr", "#455c66");
+//       nav.style.setProperty("--glow", "#455c66");
+//       nav.style.setProperty("--glow-invert", "#214551");
+//       document.querySelectorAll(".nav-btns").forEach((btn) => {
+//         btn.addEventListener("mouseover", () => {
+//           btn.style.boxShadow = "0 0 20px 2px #455c66";
+//         });
+//         btn.addEventListener("mouseout", () => {
+//           btn.style.boxShadow = "none";
+//         });
+//       });
+//     }
+
+//     document.getElementById("img-logo").src = "assets/img/logo.png";
+//     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#455c66");
+//   }
+// });
+
 // *set active nav based on click
 // let list = document.querySelectorAll("ul li");
 // list.forEach((el) => {
