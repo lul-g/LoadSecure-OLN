@@ -96,7 +96,7 @@ header {
   --glow-invert: #214551;
   position: relative;
 }
-.nav li {
+.nav li:not(:last-child) {
   margin-right: 3rem;
 }
 .nav-txt {
@@ -104,15 +104,14 @@ header {
   letter-spacing: 2px;
   --icon-clr: #455c66;
 }
-.nav-phone {
-  margin-right: 0 !important;
-}
+
 .nav-phone i {
   color: var(--primary_clr);
+  padding-right: 0.5rem;
 }
 .nav-phone span {
-  color: var(--main_bg_clr);
-  padding-left: 0.5rem;
+  color: var(--main_bg_clr) !important;
+  cursor: pointer;
 }
 .nav-txt::before,
 .extra_nav_child::before {
@@ -275,14 +274,7 @@ header {
   position: relative;
 }
 
-@media (max-width: 1100px) {
-  .nav li {
-    margin-right: 0;
-  }
-  .nav li {
-    margin-right: 2rem !important;
-  }
-
+@media (max-width: 1200px) {
   .nav-phone span {
     display: none;
   }
@@ -294,16 +286,19 @@ header {
     width: 3rem;
     height: 3rem;
 
-    color: var(--secondary_clr);
-    text-align: center;
     position: relative;
     cursor: pointer;
-    display: grid;
-    align-items: center;
+
+    margin-right: 3rem;
   }
   .nav-phone i {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
     color: var(--secondary_clr);
   }
+
   .nav-phone::after {
     content: "(888)304-3530";
     position: absolute;
@@ -328,7 +323,7 @@ header {
     transition: all 0.3s ease;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 930px) {
   /* ! header-align items remove to un-center logo and button */
   .nav {
     flex-direction: column;
@@ -367,7 +362,7 @@ header {
   }
   .nav-phone span {
     display: inline-block;
-    color: var(--main_bg_clr);
+    color: white;
   }
   .nav-phone {
     background-color: transparent;
@@ -379,6 +374,10 @@ header {
   }
   .nav-phone i {
     color: var(--primary_clr);
+    position: static;
+    /* top: auto;
+    left: auto; */
+    transform: translate(0);
   }
   .nav-phone::after {
     content: "";
