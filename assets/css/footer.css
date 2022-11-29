@@ -197,7 +197,7 @@
   width: 270px;
   padding: 1rem;
   /* opacity: 0; */
-  transform: scale(1);
+  transform: scale(0);
   -webkit-font-smoothing: antialiased;
 
   transition: ease 0.3s all;
