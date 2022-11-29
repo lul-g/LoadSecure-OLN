@@ -16,7 +16,7 @@
 .home {
   z-index: 0;
   position: relative;
-  margin: 8rem auto 4rem auto;
+  margin: 8rem auto 0 auto;
   padding: 3rem 0;
 }
 .video-player {

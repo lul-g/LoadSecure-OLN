@@ -20,12 +20,14 @@
 }
 
 .us {
-  margin: 0 auto 8rem auto;
-  padding: 0 3rem 3rem 3rem;
+  margin: 0 auto;
+  padding: 8rem 3rem;
+  margin-bottom: 3rem;
+  display: inline-block;
 }
 .us h1 {
   text-transform: uppercase;
-  font-size: 40px;
+  font-size: 35px;
   color: var(--secondary_clr);
   margin: 0 0 0.5rem 2rem;
 }

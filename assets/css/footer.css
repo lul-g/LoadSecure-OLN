@@ -197,7 +197,7 @@
   width: 270px;
   padding: 1rem;
   /* opacity: 0; */
-  transform: scale(0);
+  transform: scale(1);
   -webkit-font-smoothing: antialiased;
 
   transition: ease 0.3s all;
@@ -302,12 +302,12 @@
   }
 }
 @media (hover: none) {
-  .privacy {
+  .privacy div {
     display: none;
   }
   .privacy-links {
     top: -8rem;
-    left: 0;
+    left: -2rem;
     transform: scale(1);
   }
 }

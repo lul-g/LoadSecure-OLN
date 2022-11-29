@@ -21,8 +21,9 @@
 
 .about {
   background: var(--main_bg_clr);
-  margin: 0 auto 8rem auto;
-  padding: 0 3rem 3rem 3rem;
+  margin: 0 auto;
+  padding: 8rem 3rem 3rem 3rem;
+  /* display: inline-block; */
 }
 .about .top h1 {
   text-align: center;
@@ -30,7 +31,7 @@
   color: var(--secondary_clr);
   line-height: 3rem;
   margin-bottom: 4rem;
-  font-weight: 400;
+  font-weight: 500;
   text-transform: uppercase;
 }
 .about .triad {
