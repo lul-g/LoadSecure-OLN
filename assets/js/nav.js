@@ -1,11 +1,38 @@
 let nav_txts = document.querySelectorAll(".nav-txt");
 let pointer = document.querySelector(".nav-pointer");
+let sections = document.querySelectorAll(".sec");
+let curr = "";
+
+// window.addEventListener("scroll", () => {
+//   sections.forEach((section) => {
+//     let top = section.offsetTop;
+//     if (window.scrollY >= top) {
+//       curr = section.getAttribute("id");
+//       curr = curr[curr.length - 1];
+//     }
+//   });
+
+//   nav_txts.forEach((i) => {
+//     i.classList.remove("active");
+//     if (i.classList.contains(curr)) {
+//       i.classList.add("active");
+//     }
+//   });
+// });
 
 nav_txts.forEach((link) => {
   link.addEventListener("click", () => {
-    console.log(event.target);
+    nav_txts.forEach((i) => {
+      i.classList.remove("active");
+    });
+    link.classList.add("active");
   });
 });
+
+//? get links
+//? set event listener
+//? onclick set the active class
+//? take out active from the others
 
 // nav_txts.forEach((link) => {});
 // let nav_btn = document.querySelector(".nav-btn");

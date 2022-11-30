@@ -24,7 +24,7 @@
 
   <!-- *js -->
   <script defer src="/assets/js/active.js"></script>
-  <!-- <script defer src="/assets/js/nav.js"></script> -->
+  <script defer src="/assets/js/nav.js"></script>
 </head>
 </head>
 
@@ -38,22 +38,21 @@
       <!-- <span class="nav-pointer"></span> -->
 
       <ul class="nav">
-        <li class="nav-txt"><a href="#about">CUSTOMERS
+        <li class="nav-txt nav-txt-all A"><a href="#about">CUSTOMERS
             <ul class="extra_nav">
-              <li><a class="extra_nav_child" href="/shippers.html">Shippers</a></li>
-              <li><a class="extra_nav_child" href="/logistics.html">Logistics</a></li>
+              <li><a class="extra_nav_child nav-txt-all" href="/shippers.html">Shippers</a></li>
+              <li><a class="extra_nav_child nav-txt-all" href="/logistics.html">Logistics</a></li>
             </ul>
           </a>
         </li>
-        <li class="nav-txt"><a href="#mobile_app">MOBILE APP</a></li>
-        <li class="nav-txt"><a href="#portal">PORTAL</a></li>
+        <li class="nav-txt nav-txt-all M"><a href="#mobile_app">MOBILE APP</a></li>
+        <li class="nav-txt nav-txt-all P"><a href="#portal">PORTAL</a></li>
         <li class="glow-btn nav-btn"><a target="_blank" href="/demo.html" class="nav-btns btn-1" href="">Request a Demo</a></li>
         <li class="glow-btn nav-btn"><a class="nav-btns btn-2" target="_blank" href="https://portal.loadsecuresystems.com/login">Log In to
             Portal</a></li>
         <a href="tel:8883043530" class="nav-phone"><i class="fa-solid fa-phone"></i> <span>(888) 304-3530</span></a>
-        <li class="glow-btn nav-btn-icon icon-1"><a class="" target="_blank" href="/demo.html"  href=""><i class="fa-solid fa-rocket"></i></a></li>
-        <li class="glow-btn nav-btn-icon icon-2"><a class="" target="_blank" href="https://portal.loadsecuresystems.com/login "><i
-              class="fa-solid fa-right-to-bracket"></i></a></li>
+        <a href="/demo.html" target="_blank" class="glow-btn nav-btn-icon icon-1"><i class="fa-solid fa-rocket"></i></a>
+        <a href="https://portal.loadsecuresystems.com/login " target="_blank" class="glow-btn nav-btn-icon icon-2"><i class="fa-solid fa-right-to-bracket"></i></a>
       </ul>
       <div class="nav-toggle-btn">
         <input onclick="toggle_nav()" type="checkbox" name="" id="nav_toggler">
@@ -112,7 +111,7 @@
     </div>
   </section>
   <section id="about" class="about">
-    <div class="container-2">
+    <div id="A" class="container-2 sec">
       <div class="top">
         <h1>Your Real-time visibility solution</h1>
         <div class="triad">  
@@ -140,15 +139,15 @@
         </div>
       </div>
       <div class="btm">
-        <p>Take control of your supply chain today! Find out about the technology to revolutionize supply chains around
-          the world.</p>
+        <p>Take control of your supply chain today. Find out about the technology to revolutionize supply chains around the world with a 30 day free trial!</p>
         <div><a class="nav-btn btn-2" target="_blank" href="/demo.html">schedule a
             demo</a></div>
+        <!-- <div class="bot"><img src="/assets/img/bot.png" alt=""></div> -->
       </div>
     </div>
   </section>
   <section id="mobile_app" class="section_mobile">
-    <div class="container mobile_app">
+    <div id="M" class="container mobile_app sec">
       <div class="zone">
         <img src="./assets/img/mobile_app.jpg" alt="">
         <div>
@@ -168,7 +167,7 @@
     </div>
   </section>
   <section id="portal" class="section_portal">
-    <div class="container portal">
+    <div id="P" class="container portal sec">
       <div class="btm">
         <div class="txt">
           <h1>load secure portal</h1>

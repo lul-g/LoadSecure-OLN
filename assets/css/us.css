@@ -43,21 +43,12 @@
   margin: 0 0 3rem 2rem;
   font-size: large;
 }
-/* .portal .btm div p::before {
-    font: var(--fa-font-solid);
-    content: "\23";
-    position: absolute;
-    top: 0.6rem;
-    left: -2rem;
-    font-size: 20px;
-    width: 1rem;
-    height: 1rem;
-  } */
+
 .us .btm img {
   width: 50%;
   -o-object-fit: contain;
   object-fit: contain;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 @media (max-width: 1000px) {
