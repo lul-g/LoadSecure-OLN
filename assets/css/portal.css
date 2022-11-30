@@ -57,6 +57,9 @@
 }
 
 @media (max-width: 1000px) {
+  .portal {
+    padding: 4rem 3rem 3rem 3rem;
+  }
   .portal .btm {
     flex-direction: column-reverse;
   }

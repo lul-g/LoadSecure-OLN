@@ -26,7 +26,6 @@
 
   margin: 0 auto;
   padding: 8rem 3rem 3rem 3rem;
-  /* display: inline-block; */
 }
 
 .mobile_app h1,
@@ -45,7 +44,7 @@ h3 {
 .mobile_app h3 {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
 }
 .mobile_app .zone {
   display: flex;

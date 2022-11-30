@@ -7,7 +7,6 @@ let screen_size = window.screen;
 function toggle_nav() {
   nav.classList.toggle("active");
 }
-
 // *video related
 let video_player = document.querySelector(".video-player");
 let video_overlay = document.querySelector(".video-overlay");

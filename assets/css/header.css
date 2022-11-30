@@ -109,9 +109,28 @@ header {
   color: var(--primary_clr);
   padding-right: 0.5rem;
 }
+
 .nav-phone span {
   color: var(--main_bg_clr) !important;
   cursor: pointer;
+}
+@keyframes hithere {
+  30% {
+    transform: scale(1.2);
+  }
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .nav-txt::before,
 .extra_nav_child::before {
@@ -375,8 +394,6 @@ header {
   .nav-phone i {
     color: var(--primary_clr);
     position: static;
-    /* top: auto;
-    left: auto; */
     transform: translate(0);
   }
   .nav-phone::after {
@@ -481,5 +498,8 @@ header {
   .icon-2:hover {
     box-shadow: inset -10px 0 0px var(--secondary_clr);
     border-color: var(--primary_clr);
+  }
+  .nav-phone:hover i {
+    animation: hithere 1s ease 2;
   }
 }

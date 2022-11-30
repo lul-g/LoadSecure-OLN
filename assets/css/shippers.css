@@ -39,7 +39,7 @@
 }
 .grid-center,
 .fourth {
-  place-items: center !important;
+  place-items: center;
 }
 
 .first .btn-1 {

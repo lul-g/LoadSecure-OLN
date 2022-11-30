@@ -87,8 +87,6 @@
   justify-content: space-evenly;
   flex-direction: column;
 
-  /* background: linear-gradient(#455c66 30%, #dae4f1); */
-  /* box-shadow: 0 0 20px 10px var(--primary_clr); */
   height: 30vh;
   max-height: 200px;
   margin-top: 4rem;
@@ -128,6 +126,9 @@
 }
 
 @media (max-width: 830px) {
+  .about {
+    padding: 4rem 3rem 3rem 3rem;
+  }
   .about .triad {
     gap: 4rem 10rem;
     grid-template-columns: repeat(1, 5fr);
