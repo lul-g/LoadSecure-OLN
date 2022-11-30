@@ -416,17 +416,14 @@ header {
   .nav-toggle-btn label {
     cursor: pointer;
   }
-  .nav-toggle-btn label::after {
-    font: var(--fa-font-solid);
-    content: "\f5fd";
-
+  .nav-toggle-btn label i {
     font-size: var(--font-size-icon);
-    color: var(--nav-toggler-clr);
-  }
-  .nav-toggle-btn input:checked ~ label::after {
-    content: "\f057";
     color: var(--main_bg_clr);
   }
+  /* .nav-toggle-btn input:checked ~ label::after {
+    content: "\f057";
+    color: var(--main_bg_clr);
+  } */
   /* !not active -then transform out */
   .nav {
     transform: translateX(50rem);
@@ -435,6 +432,7 @@ header {
   .nav.active {
     transform: translateX(0);
     transition: 0.3s ease all;
+    /* box-shadow: 0 0 500000px 200px var(--secondary_clr); */
   }
 }
 

@@ -4,6 +4,7 @@ let nav_btn = document.querySelector(".nav-btn");
 let nav_toggle_btn = document.querySelector(".nav-toggle-btn");
 let nav = document.querySelector(".nav");
 let screen_size = window.screen;
+
 function toggle_nav() {
   nav.classList.toggle("active");
 }

@@ -35,8 +35,6 @@
         <img id="img-logo" src="assets/img/logo-dark.png"
           alt="Load Secure Systems is your real-time visibility solution. Our logo represents not only the improved physical security of your loads but also the increased feeling of security that you will have when working with Load Secure Systems." />
       </a>
-      <!-- <span class="nav-pointer"></span> -->
-
       <ul class="nav">
         <li class="nav-txt nav-txt-all A"><a href="#about">CUSTOMERS
             <ul class="extra_nav">
@@ -56,11 +54,13 @@
       </ul>
       <div class="nav-toggle-btn">
         <input onclick="toggle_nav()" type="checkbox" name="" id="nav_toggler">
-        <label for="nav_toggler"></label>
+        <label for="nav_toggler">
+        <i onclick="change_icon()" class="fa-solid fa-layer-group"></i>
+        </label>
       </div>
     </header>
   </section>
-  <section class="home">
+  <section class="home"  onclick="remove_nav()">
     <div class="custom-shape-divider-top">
       <svg
         data-name="Layer 1"
@@ -110,7 +110,7 @@
       </div>
     </div>
   </section>
-  <section id="about" class="about">
+  <section id="about" class="about" onclick="remove_nav()">
     <div id="A" class="container-2 sec">
       <div class="top">
         <h1>Your Real-time visibility solution</h1>
@@ -146,7 +146,7 @@
       </div>
     </div>
   </section>
-  <section id="mobile_app" class="section_mobile">
+  <section id="mobile_app" class="section_mobile" onclick="remove_nav()">
     <div id="M" class="container mobile_app sec">
       <div class="zone">
         <img src="./assets/img/mobile_app.jpg" alt="">
@@ -166,7 +166,7 @@
       </div>
     </div>
   </section>
-  <section id="portal" class="section_portal">
+  <section id="portal" class="section_portal" onclick="remove_nav()">
     <div id="P" class="container portal sec">
       <div class="btm">
         <div class="txt">
@@ -179,7 +179,7 @@
       </div>
     </div>
   </section>
-  <section id="us" class="section_us">
+  <section id="us" class="section_us" onclick="remove_nav()">
     <div class="container us">
       <div class="btm">
         <div class="txt">
@@ -214,7 +214,7 @@
       </svg>
     </div>
   </section>
-  <section class="section_footer">
+  <section class="section_footer" onclick="remove_nav()">
     <footer class="container footer">
       <div class="btm">
         <div class="contact">
