@@ -109,6 +109,24 @@ header {
   color: var(--main_bg_clr) !important;
   cursor: pointer;
 }
+@-webkit-keyframes hithere {
+  30% {
+    transform: scale(1.2);
+  }
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(20deg) scale(1.2);
+  }
+  70% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 @keyframes hithere {
   30% {
     transform: scale(1.2);
@@ -243,7 +261,11 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
 }
 
@@ -432,7 +454,7 @@ header {
   .nav.active {
     transform: translateX(0);
     transition: 0.3s ease all;
-    /* box-shadow: 0 0 500000px 200px var(--secondary_clr); */
+    box-shadow: 0 0 500000px 200px var(--secondary_clr);
   }
 }
 
@@ -495,6 +517,7 @@ header {
   }
   @media (min-width: 1201px) {
     .nav-phone:hover i {
+      -webkit-animation: hithere 1s ease 2;
       animation: hithere 1s ease 2;
     }
   }

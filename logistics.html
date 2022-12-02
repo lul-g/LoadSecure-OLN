@@ -38,25 +38,29 @@
           />
         </a>
         <ul class="nav">
-          <li class="nav-txt">
-            <a href="index.html#about"
+          <li class="nav-txt nav-txt-all A">
+            <a href="javascript:void(0)"
               >CUSTOMERS
               <ul class="extra_nav">
                 <li>
-                  <a class="extra_nav_child" href="/shippers.html">Shippers</a>
+                  <a class="extra_nav_child nav-txt-all" href="/shippers.html"
+                    >Shippers</a
+                  >
                 </li>
                 <li>
-                  <a class="extra_nav_child" href="/logistics.html"
+                  <a class="extra_nav_child nav-txt-all" href="/logistics.html"
                     >Logistics</a
                   >
                 </li>
               </ul>
             </a>
           </li>
-          <li class="nav-txt">
+          <li class="nav-txt nav-txt-all M">
             <a href="index.html#mobile_app">MOBILE APP</a>
           </li>
-          <li class="nav-txt"><a href="index.html#portal">PORTAL</a></li>
+          <li class="nav-txt nav-txt-all P">
+            <a href="index.html#portal">PORTAL</a>
+          </li>
           <li class="glow-btn nav-btn">
             <a target="_blank" href="/demo.html" class="nav-btns btn-1" href=""
               >Request a Demo</a
@@ -73,19 +77,18 @@
           <a href="tel:8883043530" class="nav-phone"
             ><i class="fa-solid fa-phone"></i> <span>(888) 304-3530</span></a
           >
-          <li class="glow-btn nav-btn-icon icon-1">
-            <a class="" target="_blank" href="/demo.html" href=""
-              ><i class="fa-solid fa-rocket"></i
-            ></a>
-          </li>
-          <li class="glow-btn nav-btn-icon icon-2">
-            <a
-              class=""
-              target="_blank"
-              href="https://portal.loadsecuresystems.com/login "
-              ><i class="fa-solid fa-right-to-bracket"></i
-            ></a>
-          </li>
+          <a
+            href="/demo.html"
+            target="_blank"
+            class="glow-btn nav-btn-icon icon-1"
+            ><i class="fa-solid fa-rocket"></i
+          ></a>
+          <a
+            href="https://portal.loadsecuresystems.com/login "
+            target="_blank"
+            class="glow-btn nav-btn-icon icon-2"
+            ><i class="fa-solid fa-right-to-bracket"></i
+          ></a>
         </ul>
         <div class="nav-toggle-btn">
           <input
@@ -94,11 +97,13 @@
             name=""
             id="nav_toggler"
           />
-          <label for="nav_toggler"></label>
+          <label for="nav_toggler">
+            <i onclick="change_icon()" class="fa-solid fa-layer-group"></i>
+          </label>
         </div>
       </header>
     </section>
-    <section class="section_main">
+    <section class="section_main" onclick="remove_nav()">
       <div class="custom-shape-divider-top">
         <svg
           data-name="Layer 1"
@@ -132,11 +137,8 @@
               and more. Load Secure provides you and your customers benefits
               that are unmatched within the industry.
             </p>
-            <a
-              target="_blank"
-              href="https://portal.loadsecuresystems.com/login"
-              class="nav-btns btn-1"
-              >Request A Demo</a
+            <a target="_blank" href="/demo.html" class="nav-btns btn-1" href=""
+              >Request a Demo</a
             >
           </div>
           <div class="img">
@@ -257,7 +259,7 @@
       </div>
     </section>
 
-    <section class="section_footer">
+    <section class="section_footer" onclick="remove_nav()">
       <footer class="container footer">
         <div class="btm">
           <div class="contact">
@@ -345,7 +347,7 @@
           </div>
         </div>
       </footer>
-      <section class="copyright_section">
+      <section class="copyright_section" onclick="remove_nav()">
         <div class="container copyright">
           <p>&copy;2022 LoadSecureSystems</p>
           <div class="privacy">

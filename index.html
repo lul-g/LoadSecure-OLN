@@ -14,7 +14,7 @@
 
   <!-- *css -->
   <link rel="stylesheet" href="/assets/css/header.css" />
-  <link rel="stylesheet" href="/assets/css/hero.css" />
+  <link rel="stylesheet" href="/assets/css/video.css" />
   <link rel="stylesheet" href="/assets/css/about.css" />
   <link rel="stylesheet" href="/assets/css/mobile.css" />
   <link rel="stylesheet" href="/assets/css/portal.css" />
@@ -36,7 +36,7 @@
           alt="Load Secure Systems is your real-time visibility solution. Our logo represents not only the improved physical security of your loads but also the increased feeling of security that you will have when working with Load Secure Systems." />
       </a>
       <ul class="nav">
-        <li class="nav-txt nav-txt-all A"><a href="#about">CUSTOMERS
+        <li class="nav-txt nav-txt-all A"><a href="javascript:void(0)">CUSTOMERS
             <ul class="extra_nav">
               <li><a class="extra_nav_child nav-txt-all" href="/shippers.html">Shippers</a></li>
               <li><a class="extra_nav_child nav-txt-all" href="/logistics.html">Logistics</a></li>
@@ -85,7 +85,10 @@
       </svg>
     </div>
     <div class="container">
+      <!-- <div class="img"><img src="/assets/img/vide_img.png" alt=""></div> -->
+
       <div class="video-player">
+
         <div class="video-overlay"></div>
         <video muted src="./assets/img/loadsecure_video.mp4"></video>
         <div class="txt-overlay">
@@ -175,7 +178,7 @@
           <p>Shippers and receivers can take advantage of quick and easy to view information, displayed immediately upon login. No learning curve, and no difficult steps. </p>
           <p>The portal is customizable to fit your needs – whether you need a simple platform, extra features, or scalability, the Load Secure enterprise team works with you to get exactly what you need. </p>
         </div>
-        <img src="assets/img/comp-2.png" alt="">
+        <img src="assets/img/comp.png" alt="">
       </div>
     </div>
   </section>
@@ -221,7 +224,7 @@
           <h1>Get connected</h1>
           <ul>
             <li>
-              <i class="fa-solid fa-phone"></i><span>(888) 304 -3530</span>
+              <a href="tel:8883043530" style="color: white !important;"><i class="fa-solid fa-phone"></i><span style="border-bottom: 2px solid #fec013;" >(888) 304 -3530</span></a>
             </li>
             <li>
               <i class="fa-solid fa-envelope"></i
@@ -302,7 +305,7 @@
         </div>
       </div>
     </footer>
-    <section class="copyright_section">
+    <section class="copyright_section" onclick="remove_nav()">
       <div class="container copyright">
         <p>&copy;2022 LoadSecureSystems</p>
         <div class="privacy">

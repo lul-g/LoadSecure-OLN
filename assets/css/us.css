@@ -57,7 +57,7 @@
   }
   .us .btm {
     flex-direction: column-reverse;
-    align-items: center;
+    align-items: flex-start;
   }
   .us .btm div {
     margin-top: 5rem;
@@ -65,7 +65,7 @@
   .us .btm div p,
   .us h1 {
     width: 100%;
-    margin-left: 1rem !important;
+    margin-left: 0 !important;
   }
   .us .btm img {
     width: 80%;

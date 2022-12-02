@@ -6,16 +6,7 @@ let sections = document.querySelectorAll(".sec");
 let not_headers = document.querySelectorAll(
   ":not(.section_header *, .section_header, .nav-toggle-btn, .nav-toggle-btn *)"
 );
-let screen_size_2 = window.screen;
 
-// if (screen_size_2.width <= "930") {
-//   not_headers.forEach((not_header) => {
-//     not_header.addEventListener("click", () => {
-//       remove_nav();
-//     });
-//   });
-// }
-// document.querySelectorAll(".home, .home *)
 function remove_nav() {
   nav_2.classList.remove("active");
   document.querySelector(".nav-toggle-btn label i").className =
@@ -29,11 +20,11 @@ function change_icon() {
   }
 }
 
-nav_txts.forEach((link) => {
-  link.addEventListener("click", () => {
-    nav_txts.forEach((i) => {
-      i.classList.remove("active");
-    });
-    link.classList.add("active");
-  });
-});
+// nav_txts.forEach((link) => {
+//   link.addEventListener("click", () => {
+//     nav_txts.forEach((i) => {
+//       i.classList.remove("active");
+//     });
+//     link.classList.add("active");
+//   });
+// });
