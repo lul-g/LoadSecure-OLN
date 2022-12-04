@@ -530,13 +530,15 @@ header {
     box-shadow: inset -10px 0 0px var(--secondary_clr);
     border-color: var(--primary_clr);
   }
-  @media (min-width: 1201px) {
-    .nav-phone:hover i {
-      -webkit-animation: hithere 1s ease 2;
-      animation: hithere 1s ease 2;
-    }
+  .nav-phone:hover i {
+    -webkit-animation: hithere 1s ease 2;
+    animation: hithere 1s ease 2;
   }
-  @media (max-width: 1200px) {
+
+  @media (930px < width < 1200px) {
+    .nav-phone:hover i {
+      animation: none;
+    }
     .nav-phone:hover {
       transition: all ease 0.3s;
       box-shadow: inset -10px 0 0px var(--secondary_clr);
