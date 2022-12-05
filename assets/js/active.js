@@ -23,6 +23,9 @@ let txt_overlay = document.querySelector(".video-player .txt");
 
 video.currentTime = 5.5;
 play_btn.addEventListener("click", (e) => video_play());
+setTimeout(() => {
+  video_play();
+}, 300);
 function video_play() {
   if (video.paused) {
     video.currentTime = 0;
@@ -68,6 +71,7 @@ function video_play() {
 video.onended = () => {
   video.currentTime = 5.5;
 
+  video_overlay.style.left = "0";
   txt_overlay.style.transform = "translate(0)";
 
   play_btn_icon.classList.replace("fa-circle-pause", "fa-circle-play");

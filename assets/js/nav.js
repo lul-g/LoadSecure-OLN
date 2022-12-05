@@ -20,11 +20,20 @@ function change_icon() {
   }
 }
 
-// nav_txts.forEach((link) => {
-//   link.addEventListener("click", () => {
-//     nav_txts.forEach((i) => {
-//       i.classList.remove("active");
-//     });
-//     link.classList.add("active");
-//   });
-// });
+window.addEventListener("scroll", () => {
+  let current = "";
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - 50) {
+      current = section.getAttribute("id");
+    }
+  });
+  nav_txts.forEach((link) => {
+    link.classList.remove("active");
+    if (link.classList.contains(current)) {
+      console.log("hi");
+      link.classList.add("active");
+    }
+  });
+});
