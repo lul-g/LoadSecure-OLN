@@ -148,7 +148,7 @@
 .fourth {
   display: grid;
   border: 5px solid var(--secondary_clr);
-  border-radius: 15px;
+  /* border-radius: 15px; */
   box-shadow: -10px 10px 0 0 var(--secondary_clr);
   transition: 0.2s ease all;
   margin: 0rem 0 5rem 0;
@@ -252,10 +252,10 @@
 
 @media (hover: hover) {
   .first .btn-1:hover {
-    box-shadow: 0 0 20px 2px var(--secondary_clr) !important;
+    /* box-shadow: 0 0 20px 2px var(--secondary_clr) !important; */
   }
-  .fourth:hover {
+  /* .fourth:hover {
     transform: translate(2px, 2px);
     box-shadow: none;
-  }
+  } */
 }

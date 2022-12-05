@@ -178,6 +178,6 @@
 
 @media (hover: hover) {
   .first .btn-1:hover {
-    box-shadow: 0 0 20px 2px var(--secondary_clr) !important;
+    /* box-shadow: 0 0 20px 2px var(--secondary_clr) !important; */
   }
 }
