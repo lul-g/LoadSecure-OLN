@@ -26,19 +26,16 @@ let touchEvent = "ontouchstart" in window ? "touchstart" : "click";
 video.currentTime = 5.5;
 play_btn.addEventListener(touchEvent, (e) => video_play());
 setTimeout(() => {
-  screen_size.width > 930 ? video_play() : null;
+  // screen_size.width > 930 ? video_play() : null;
 }, 300);
 video.addEventListener("pause", () => {
   video.currentTime = 5.5;
 
   video_overlay.style.left = "0";
   txt_overlay.style.transform = "translate(0)";
-  play_btn_container.style.top = "initial";
-  play_btn_container.style.left = "10%";
-  play_btn_container.style.bottom = "20%";
+  play_btn_container.style.transform = "translate(0, 0)";
 
   play_btn_icon.classList.replace("fa-circle-pause", "fa-circle-play");
-
   fullscreen_btn_container.style.display = "none";
 });
 function video_play() {
@@ -46,15 +43,17 @@ function video_play() {
     video.currentTime = 0;
     video.play();
 
-    video_overlay.style.left = "110%";
+    video_overlay.style.left = "200%";
     txt_overlay.style.transform = "translate(-200%)";
 
-    play_btn_icon.classList.replace("fa-circle-play", "fa-circle-pause");
-    play_btn_container.style.top = "40%";
-    play_btn_container.style.left = "3%";
-    if (screen_size.width <= 930) fullscreen_btn.style.display = "none";
+    screen_size.width < 500
+      ? (play_btn_container.style.left = "0rem")
+      : (play_btn_container.style.left = "2rem");
+    play_btn_container.style.top = "50%";
     fullscreen_btn_container.style.top = "60%";
-    fullscreen_btn_container.style.left = "3%";
+
+    play_btn_icon.classList.replace("fa-circle-play", "fa-circle-pause");
+    if (screen_size.width <= 930) fullscreen_btn.style.display = "none";
 
     fullscreen_btn_container.style.display = "inline-block";
     // fullscreen
@@ -75,12 +74,11 @@ function video_play() {
 
     video_overlay.style.left = "0";
     txt_overlay.style.transform = "translate(0)";
-    play_btn_container.style.top = "initial";
-    play_btn_container.style.left = "10%";
-    play_btn_container.style.bottom = "20%";
+    play_btn_container.style.left = "2rem";
+    play_btn_container.style.top = "70%";
+    fullscreen_btn_container.style.top = "60%";
 
     play_btn_icon.classList.replace("fa-circle-pause", "fa-circle-play");
-
     fullscreen_btn_container.style.display = "none";
   }
 }
@@ -89,15 +87,12 @@ video.onended = () => {
 
   video_overlay.style.left = "0";
   txt_overlay.style.transform = "translate(0)";
+  play_btn_container.style.left = "2rem";
+  play_btn_container.style.top = "70%";
+  fullscreen_btn_container.style.top = "60%";
 
   play_btn_icon.classList.replace("fa-circle-pause", "fa-circle-play");
-  play_btn_container.style.top = "initial";
-  play_btn_container.style.left = "10%";
-  play_btn_container.style.bottom = "20%";
-
   fullscreen_btn_container.style.display = "none";
-  if (screen_size.width >= 751) fullscreen_btn_container.style.left = "20%";
-  else fullscreen_btn_container.style.left = "15%";
 };
 // sound_btn.addEventListener("click", (e) => unmute());
 // function unmute() {
@@ -108,19 +103,6 @@ video.onended = () => {
 //   }
 // }
 
-// *nav-bar txt colors on window resize
-let nav_links = document.querySelectorAll(".nav-txt a");
-// window.addEventListener("resize", () => {
-//   if (screen_size.width <= 750) {
-//     nav_links.forEach((nav_link) => {
-//       nav_link.style.color = "#dae4f1";
-//     });
-//   } else {
-//     nav_links.forEach((nav_link) => {
-//       nav_link.style.color = "#455c66";
-//     });
-//   }
-// });
 //* to-top-btn
 let to_top_btn = document.querySelector(".to-top-btn");
 to_top_btn.addEventListener("click", () =>
@@ -154,67 +136,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-//   if (windowPos > 0) {
-//     section_header.classList.add("scrolled");
-
-//     nav_links.forEach((nav_link) => {
-//       nav_link.style.color = "#dae4f1";
-//       nav_link.style.borderColor = "#dae4f1";
-//     });
-
-//     extra_nav.style.background = "#dae4f1";
-//     extra_nav_child.forEach((child) => {
-//       child.style.color = "#455c66";
-//       child.style.borderColor = "#455c66";
-//     });
-
-//     nav_txt.style.setProperty("--icon-clr", "#dae4f1");
-//     nav.style.setProperty("--glow", "#dae4f1");
-//     nav.style.setProperty("--glow-invert", "#dae4f1");
-//     document.querySelectorAll(".nav-btns").forEach((btn) => {
-//       btn.addEventListener("mouseover", () => {
-//         btn.style.boxShadow = "0 0 20px 2px white";
-//       });
-//       btn.addEventListener("mouseout", () => {
-//         btn.style.boxShadow = "none";
-//       });
-//     });
-
-//     document.getElementById("img-logo").src = "assets/img/logo-dark.png";
-//     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#dae4f1");
-//   } else {
-//     section_header.classList.remove("scrolled");
-
-//     if (screen_size.width > 750) {
-//       console.log(screen_size.width);
-//       nav_links.forEach((nav_link) => {
-//         nav_link.style.color = "#214551";
-//         nav_link.style.borderColor = "#214551";
-//       });
-//       extra_nav.style.background = "#214551";
-//       extra_nav_child.forEach((child) => {
-//         child.style.color = "#dae4f1";
-//         child.style.borderColor = "#dae4f1";
-//       });
-
-//       nav_txt.style.setProperty("--icon-clr", "#455c66");
-//       nav.style.setProperty("--glow", "#455c66");
-//       nav.style.setProperty("--glow-invert", "#214551");
-//       document.querySelectorAll(".nav-btns").forEach((btn) => {
-//         btn.addEventListener("mouseover", () => {
-//           btn.style.boxShadow = "0 0 20px 2px #455c66";
-//         });
-//         btn.addEventListener("mouseout", () => {
-//           btn.style.boxShadow = "none";
-//         });
-//       });
-//     }
-
-//     document.getElementById("img-logo").src = "assets/img/logo.png";
-//     nav_toggle_btn.style.setProperty("--nav-toggler-clr", "#455c66");
-//   }
-// });
-
 // *set active nav based on click
 // let list = document.querySelectorAll("ul li");
 // list.forEach((el) => {
@@ -233,14 +154,3 @@ window.addEventListener("scroll", () => {
 //     }
 //   });
 // }
-
-// *set active nav based on page
-// let page_pos = document.body.scrollTop;
-// window.addEventListener("scroll", () => {
-//   console.log(document.documentElement.scrollTop, document.body.scrollTop);
-// });
-
-// TODO: oustide nav click coallpses nav
-// ! TODO: on scroll header needs to change cz video messes with it
-//! TODO: nav indicate page on scroll --- toggle active class by widnow location
-// * TODO:  EXTRA: header should disapper on scroll down and appear on scroll up (if nav should be fixed) else no problemo

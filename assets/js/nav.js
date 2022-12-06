@@ -32,7 +32,6 @@ window.addEventListener("scroll", () => {
   nav_txts.forEach((link) => {
     link.classList.remove("active");
     if (link.classList.contains(current)) {
-      console.log("hi");
       link.classList.add("active");
     }
   });

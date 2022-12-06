@@ -43,7 +43,7 @@
 .fifth {
   padding: 3rem 0;
 }
-.first .btn-1 {
+.main .btn-1 {
   border: 2px solid var(--secondary_clr);
   color: var(--secondary_clr);
 }
