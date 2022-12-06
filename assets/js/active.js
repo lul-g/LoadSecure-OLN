@@ -26,7 +26,7 @@ let touchEvent = "ontouchstart" in window ? "touchstart" : "click";
 video.currentTime = 5.5;
 play_btn.addEventListener(touchEvent, (e) => video_play());
 setTimeout(() => {
-  video_play();
+  video.onloadeddata ? video_play() : null;
 }, 300);
 video.addEventListener("pause", () => {
   video.currentTime = 5.5;
