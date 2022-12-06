@@ -20,19 +20,19 @@ function change_icon() {
   }
 }
 
-window.addEventListener("scroll", () => {
-  let current = "";
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (pageYOffset >= sectionTop - 50) {
-      current = section.getAttribute("id");
-    }
-  });
-  nav_txts.forEach((link) => {
-    link.classList.remove("active");
-    if (link.classList.contains(current)) {
-      link.classList.add("active");
-    }
-  });
-});
+// window.addEventListener("scroll", () => {
+//   let current = "";
+//   sections.forEach((section) => {
+//     const sectionTop = section.offsetTop;
+//     const sectionHeight = section.clientHeight;
+//     if (pageYOffset >= sectionTop - 50) {
+//       current = section.getAttribute("id");
+//     }
+//   });
+//   nav_txts.forEach((link) => {
+//     link.classList.remove("active");
+//     if (link.classList.contains(current)) {
+//       link.classList.add("active");
+//     }
+//   });
+// });
