@@ -23,9 +23,10 @@ let txt_overlay = document.querySelector(".video-player .txt");
 
 video.currentTime = 5.5;
 play_btn.addEventListener("click", (e) => video_play());
-setTimeout(() => {
-  video_play();
-}, 300);
+// setTimeout(() => {
+// }, 300);
+video_play();
+
 function video_play() {
   if (video.paused) {
     video.currentTime = 0;
