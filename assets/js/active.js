@@ -21,8 +21,10 @@ let fullscreen_btn = document.querySelector(".fullscreen-controller label");
 let fullscreen_btn_container = document.querySelector(".fullscreen-controller");
 let txt_overlay = document.querySelector(".video-player .txt");
 
+let touchEvent = "ontouchstart" in window ? "touchstart" : "click";
+
 video.currentTime = 5.5;
-play_btn.addEventListener("click", (e) => video_play());
+play_btn.addEventListener(touchEvent, (e) => video_play());
 // setTimeout(() => {
 // }, 300);
 // video_play();
