@@ -31,10 +31,12 @@ body::-webkit-scrollbar-thumb {
   min-height: 12rem !important;
   border-left: 2px solid transparent;
   background-clip: content-box;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 body::-webkit-scrollbar-thumb:hover {
   background-color: #ebaf09;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 } */
 body {
