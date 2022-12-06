@@ -40,19 +40,20 @@ function video_play() {
     play_btn_icon.classList.replace("fa-circle-play", "fa-circle-pause");
     play_btn_container.style.top = "40%";
     play_btn_container.style.left = "3%";
+    if (screen_size.width <= 930) fullscreen_btn.style.display = "none";
     fullscreen_btn_container.style.top = "60%";
     fullscreen_btn_container.style.left = "3%";
 
     fullscreen_btn_container.style.display = "inline-block";
     // fullscreen
-    fullscreen_btn.addEventListener("click", () => {
-      if (video.requestFullscreen) {
+    fullscreen_btn.addEventListener(touchEvent, () => {
+      if (video.requestFullscreen && screen_size.width > 930) {
         video.requestFullscreen();
-      } else if (elem.mozRequestFullScreen) {
+      } else if (elem.mozRequestFullScreen && screen_size.width > 930) {
         video.mozRequestFullScreen();
-      } else if (elem.webkitRequestFullscreen) {
+      } else if (elem.webkitRequestFullscreen && screen_size.width > 930) {
         video.webkitRequestFullscreen();
-      } else if (elem.msRequestFullscreen) {
+      } else if (elem.msRequestFullscreen && screen_size.width > 930) {
         video.msRequestFullscreen();
       }
     });
