@@ -135,7 +135,7 @@
 @media (max-width: 880px) {
   .txt-overlay {
     width: 90%;
-    left: 3rem;
+    left: 2.5rem;
   }
   .video-player .txt-overlay .txt p {
     width: 80%;

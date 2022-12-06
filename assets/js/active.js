@@ -25,10 +25,22 @@ let touchEvent = "ontouchstart" in window ? "touchstart" : "click";
 
 video.currentTime = 5.5;
 play_btn.addEventListener(touchEvent, (e) => video_play());
-// setTimeout(() => {
-// }, 300);
-// video_play();
+setTimeout(() => {
+  video_play();
+}, 300);
+video.addEventListener("pause", () => {
+  video.currentTime = 5.5;
 
+  video_overlay.style.left = "0";
+  txt_overlay.style.transform = "translate(0)";
+  play_btn_container.style.top = "initial";
+  play_btn_container.style.left = "10%";
+  play_btn_container.style.bottom = "20%";
+
+  play_btn_icon.classList.replace("fa-circle-pause", "fa-circle-play");
+
+  fullscreen_btn_container.style.display = "none";
+});
 function video_play() {
   if (video.paused) {
     video.currentTime = 0;

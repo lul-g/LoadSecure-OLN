@@ -100,6 +100,7 @@
   font-size: var(--font-size-icon);
   cursor: pointer;
   color: var(--main_bg_clr);
+  transition: transform 0.3s;
 }
 /* .footer .socials ul li i:hover {
   transform: scale(1.2);
@@ -283,7 +284,7 @@
 /** all hover effects */
 @media (hover: hover) {
   .footer .socials ul li i:hover {
-    transform: scale(1.2);
+    transform: scale(1.3);
     transition: color linear 0.2s;
     color: var(--primary_clr);
   }
