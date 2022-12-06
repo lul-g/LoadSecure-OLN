@@ -25,7 +25,7 @@ video.currentTime = 5.5;
 play_btn.addEventListener("click", (e) => video_play());
 // setTimeout(() => {
 // }, 300);
-video_play();
+// video_play();
 
 function video_play() {
   if (video.paused) {
