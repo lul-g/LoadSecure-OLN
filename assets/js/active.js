@@ -43,7 +43,7 @@ video.addEventListener("play", () => {
   txt_overlay.style.transform = "translate(-200%)";
 
   screen_size.width < 500
-    ? (play_btn_container.style.left = "0rem")
+    ? (play_btn_container.style.left = ".5rem")
     : (play_btn_container.style.left = "2rem");
   play_btn_container.style.top = "50%";
   fullscreen_btn_container.style.top = "60%";
