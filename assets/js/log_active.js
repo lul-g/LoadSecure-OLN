@@ -10,10 +10,10 @@ function toggle_nav() {
 }
 
 //* to-top-btn
-let to_top_btn = document.querySelector(".to-top-btn");
-to_top_btn.addEventListener("click", () =>
-  window.scrollTo({ top: 0, behavior: "smooth" })
-);
+// let to_top_btn = document.querySelector(".to-top-btn");
+// to_top_btn.addEventListener("click", () =>
+//   window.scrollTo({ top: 0, behavior: "smooth" })
+// );
 // *newsletter
 let newsletter_toggler = document.querySelector(".footer .btn-2");
 let newsletter_form = document.querySelector(".newsletter-form");
@@ -33,11 +33,11 @@ let extra_nav = document.querySelector(".extra_nav");
 let extra_nav_child = document.querySelectorAll(".extra_nav_child");
 let glow_btn = document.querySelectorAll(".glow-btn");
 
-window.addEventListener("scroll", () => {
-  let windowPos = window.scrollY;
-  if (windowPos > 700) {
-    to_top_btn.style.transform = "translate(0, 0)";
-  } else {
-    to_top_btn.style.transform = "translate(10rem, 10rem)";
-  }
-});
+// window.addEventListener("scroll", () => {
+//   let windowPos = window.scrollY;
+//   if (windowPos > 700) {
+//     to_top_btn.style.transform = "translate(0, 0)";
+//   } else {
+//     to_top_btn.style.transform = "translate(10rem, 10rem)";
+//   }
+// });
