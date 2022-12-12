@@ -300,7 +300,7 @@
   }
   .privacy-links li a:hover {
     text-decoration: underline;
-    color: rgb(7, 151, 161);
+    color: var(--primary_clr);
     transition: all linear 0.1s;
   }
 }
