@@ -100,14 +100,16 @@
   margin-bottom: 2rem;
 }
 
+.video-controller input,
+.sound-controller input,
+.fullscreen-controller input {
+  display: none;
+}
 .video-controller {
   position: absolute;
   top: 70%;
   left: var(--play-btn-left);
   transition: all 0.5s;
-}
-.video-controller input {
-  display: none;
 }
 .video-controller label i {
   font: var(--fa-font-solid);
@@ -115,7 +117,21 @@
   font-size: var(--font-size-icon);
   cursor: pointer;
 }
+.sound-controller {
+  position: absolute;
+  bottom: 5rem;
+  left: var(--play-btn-left);
 
+  transition: all ease 0.5s;
+  display: none;
+}
+.sound-controller label i {
+  font: var(--fa-font-solid);
+
+  color: var(--primary_clr);
+  font-size: var(--font-size-icon);
+  cursor: pointer;
+}
 .fullscreen-controller {
   position: absolute;
   bottom: 5rem;
@@ -123,9 +139,7 @@
   transition: all ease 0.5s;
   display: none;
 }
-.fullscreen-controller input {
-  display: none;
-}
+
 .fullscreen-controller label::after {
   content: "\f065";
   font: var(--fa-font-solid);
