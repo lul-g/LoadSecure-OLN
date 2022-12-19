@@ -21,41 +21,53 @@
 
 .mobile_app {
   display: flex;
-  align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+
+  margin: 0 auto;
+  padding: 8rem 3rem 3rem 3rem;
 }
+
 .mobile_app h1,
 h3 {
   text-transform: uppercase;
   color: var(--secondary_clr);
-  text-align: center;
+  text-align: start;
 }
 .mobile_app h1 {
-  font-weight: 400;
-  margin: 2rem 0 0 0;
+  font-size: 40px;
+  font-weight: 500;
+  width: 80%;
+  min-width: 482px;
+  margin-left: 0 !important;
 }
 .mobile_app h3 {
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: 500;
   margin-bottom: 1rem;
-  font-size: 17px;
 }
 .mobile_app .zone {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-
-  padding: 2rem;
+  align-items: flex-start;
+}
+.mobile_app .zone img {
+  border-radius: 20px;
+  width: 350px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 .mobile_app .zone div {
-  margin: 0 0 0 3rem;
+  margin: 0 0 0 2rem;
+  max-width: 800px;
 }
 .mobile_app .zone div p {
-  margin: 2rem 0;
-  line-height: 2.5rem;
+  color: var(--secondary_clr);
   position: relative;
+  font-size: large;
+  margin-bottom: 3rem;
 }
-.mobile_app .zone div p::before {
+/* .mobile_app .zone div p::before {
   font: var(--fa-font-solid);
   content: "\23";
   position: absolute;
@@ -64,11 +76,28 @@ h3 {
   font-size: 20px;
   width: 1rem;
   height: 1rem;
-}
+} */
 
-@media (max-width: 785px) {
+@media (max-width: 1000px) {
   .mobile_app .zone {
     flex-direction: column;
     padding: 2rem 1rem;
+    align-items: center;
+  }
+  .mobile_app .zone div {
+    margin-top: 5rem;
+    margin-left: 0;
+  }
+  .mobile_app h1 {
+    width: 100%;
+  }
+}
+@media (max-width: 550px) {
+  .mobile_app h1 {
+    font-size: 35px;
+    min-width: initial;
+  }
+  .mobile_app h3 {
+    font-size: 15px;
   }
 }
